@@ -1,7 +1,7 @@
 <?php
 //include_once "conferir-autenticacao.php"; 
 include_once "mensagens.php"; 
-$titulo = $cadastroUsuario;
+$titulo = $cadastrarProfessores;
 include_once "head.php"; 
 ?>
 
@@ -23,7 +23,7 @@ include_once "head.php";
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Cadastro de Professor <span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="#">Cadastrar Professores<span class="sr-only">(current)</span></a></li>
 					<li><a href="pagina-inicial.php">Página Inicial</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
@@ -35,7 +35,7 @@ include_once "head.php";
 	<form id="cadastro-professor">
 		<div class="panel panel-default col-md-offset-1 col-md-10">
 			<div class="panel-heading">
-				<h1 class="panel-title text-center">Cadastro de Professor</h1>
+				<h1 class="panel-title text-center">Cadastrar Professores</h1>
 			</div>
 			<div class="panel-body">
 						<div class="row">
@@ -89,7 +89,7 @@ include_once "head.php";
 						</div>						
 					</div>
 			<div class="panel-footer text-right">
-				<a class="btn btn-default" href="usuario.php">Cancelar</a>
+				<a class="btn btn-default" href="professores.php">Cancelar</a>
 				<button class="btn btn-primary" id="btn-salvar" type="submit">Salvar</button>
 			</div>
 		</div>
@@ -117,42 +117,47 @@ include_once "head.php";
 
 
 <script>
-	jQuery("#matricula").mask("999999");
+
 	jQuery("#quantidade_orientacoes").mask("9");
 </script>
 
 
-<script>
-	$(document).ready(function(){
-		$('#btn-salvar').click(function(){
-			var dados = $('#cadastro-professor').serialize();
-			jQuery.ajax({
-				type: "POST",
-				url: "../model/cadastro-professor.php",
-				data: dados,
-				success: function(data)
-				{
-					data = JSON.parse(data);
-
-					$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");
-					if(data.status == true){
-						$("div.mensagem-inserir-usuario").show();
-						$("div.mensagem-inserir-usuario").addClass("alert-success");
-						$("div.mensagem-inserir-usuario").html(data.mensagem);
-						$('#cadastro-professor').each (function(){this.reset();});
+<script src="assets/javascripts/localization/messages_pt_BR.js"></script>
+<script type="text/javascript">
+	$().ready(function(){
+		$('#cadastro-professor').validate({
+			rules: {
+				// nome: { required: true },
+				matricula: { required: true, minlength: 6, maxlength:6, number: true },
+			},
+			submitHandler: function(form){
+				var dados = $(form).serialize();
+				jQuery.ajax({
+					type: "POST",
+					url: "../model/cadastro-professor.php",
+					data: dados,
+					success: function(data)
+					{
+						data = JSON.parse(data);
+						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");
+						if(data.status == true){
+							$("div.mensagem-inserir-usuario").show();
+							$("div.mensagem-inserir-usuario").addClass("alert-success");
+	        				$("div.mensagem-inserir-usuario").html(data.mensagem);
+	        				$('#cadastro-professor').each (function(){this.reset();});
+						}
+						else{
+							$("div.mensagem-inserir-usuario").show();
+							$("div.mensagem-inserir-usuario").addClass("alert-danger");
+	        				$("div.mensagem-inserir-usuario").html(data.mensagem);		
+						}
 					}
-					else{
-						$("div.mensagem-inserir-usuario").show();
-						$("div.mensagem-inserir-usuario").addClass("alert-danger");
-						$("div.mensagem-inserir-usuario").html(data.mensagem);		
-					}
-				}
-			});			
-			return false;
+				});			
+				return false;
+			}
 		});
 	});
 </script>
-
 	
 </body>
 </html>

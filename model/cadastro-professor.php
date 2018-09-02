@@ -20,7 +20,7 @@ values ('$nome' , $matricula, '$email', '$disciplina', '$semestre_letivo','$area
 if(mysqli_query($link, $query)){ 
 	$retorno = array('mensagem' => "Professor Cadastrado com Sucesso", 'status' => true);
 } else{ 
-	$retorno = array('mensagem' => "Professor Não Pode Ser Cadastrado, Dados Incorretos ou Matrícula Já Cadastrada");
+	$retorno = array('mensagem' => "Matrícula Já Cadastrada");
 } 
     echo json_encode($retorno);
 	mysqli_close($link);

@@ -9,5 +9,6 @@ $relatorio = "Relatório";
 $aprovarsolicitcaodeorientacao = "Aprovar Solicitação de Orientação";
 $relatorioUsuario = "Relatório de Usuário";
 $cadastroReceptor = "Cadastro de Receptor";
-$cadastrarprofessor = "Cadastrar Professor";
+$cadastrarProfessores = "Cadastrar Professores";
+$professores = "Professores"
 ?>

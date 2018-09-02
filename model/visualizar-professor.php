@@ -3,9 +3,9 @@
 	require '../view/connection.php';
 	$link = DBConnect();
 
-	$cpf = $_POST['cpf'];
+	$matricula = $_POST['matricula'];
 
-	$sql = "SELECT * FROM `pessoa` WHERE CPF = $cpf ";
+	$sql = "SELECT * FROM `professores` WHERE matricula = $matricula ";
 
 
 
