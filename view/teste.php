@@ -59,6 +59,14 @@
 	   }
 
 
+	   
+	   <div class="col-sm-5">
+	   <div class="form-group no-margin-hr">
+		   <label class="control-label">Nome</label>
+		   <input type="text" name="nome" class="form-control" placeholder="Nome" autofocus>
+	   </div>
+   </div>
+
 
 ?>
 

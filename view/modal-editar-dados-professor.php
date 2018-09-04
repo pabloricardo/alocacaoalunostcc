@@ -50,7 +50,7 @@
 					success: function(data)
 					{
 						$('#btn-pesquisar').click();
-						alert(data);
+						alert("Dados alterados com sucesso");
 					}
 				});			
 				return false;

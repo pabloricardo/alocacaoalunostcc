@@ -2,6 +2,21 @@
 	padding: 0px;
 }
 
+.theme-default.page-signin .signin-info, .theme-default.page-signup .signup-header {
+    background: rgba(38, 79, 105, 0.8);
+}
+
+.navbar-default {
+    border-color: #d0d0d0;
+}
+
+.panel-default>.panel-heading, .panel-heading {
+    background-color: #dcdadacc;
+}
+
+.theme-default {
+    background: #eceff1;
+}
 .display-none{
 	display: none;
 }

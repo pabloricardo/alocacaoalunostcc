@@ -34,7 +34,6 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
-	<!--action="../model/pesquisa-usuario.php" method="POST"-->
 	<form id="pesquisar-form">
 		<div class="panel panel-default col-md-offset-1 col-md-10">
 			<div class="panel-heading">
@@ -42,10 +41,24 @@
 			</div>
 			<div class="panel-body">
 				<div class="row">
+					<?php
+					#chama o arquivo de configuração com o banco
+					require './config.php';
+					require './connection.php';
+					$link = DBConnect();
+					#seleciona os dados da tabela produto
+					$sql = "SELECT nome FROM `professores`";
+					$result = $link->query($sql);
+					?>
 					<div class="col-sm-6">
 						<div class="form-group no-margin-hr">
-							<label class="control-label">Nome</label>
-							<input type="text" name="nome" class="form-control" placeholder="Nome" autofocus>
+							<label for="sel1">Nome</label>
+							<select class="form-control" id="nome" name="nome">
+								<option selected value>Selecione</option>
+								<?php  while($row = $result->fetch_assoc()) {?>
+								<option value="<?php echo $row['nome'] ?>"><?php echo $row['nome'] ?></option>
+								<?php } ?>
+							</select>
 						</div>
 					</div>
 					<div class="col-sm-2">
@@ -91,7 +104,6 @@
 			</div>
 		</div>
 	</div>
-
 	
 
 	<script src="assets/javascripts/localization/messages_pt_BR.js"></script>
@@ -99,8 +111,7 @@
 		$().ready(function(){
 			$('#pesquisar-form').validate({
 				rules: {
-					// nome: { required: true },
-					// matricula: { required: true, minlength: 6, maxlength:6, number: true },
+					matricula: { minlength: 6, maxlength:6, number: true },
 				},
 				submitHandler: function(form){
 					var dados = $(form).serialize();

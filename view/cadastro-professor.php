@@ -61,19 +61,13 @@ include_once "head.php";
 						<div class="col-sm-2">
 									<label for="sel1">Disciplina</label>
 									<select class="form-control" id="disciplina" name="disciplina">
-										<option selected value>Selecione</option>
+										<option value="" selected>Selecione</option>
 										<option >TCC01</option>
 										<option>TCC02</option>
 										<option>Ambas</option>
 									</select>
 							</div>
 						<div class="row">
-							<div class="col-md-2">		          
-								<label class="control-label">Semestre Letivo</label>
-								<div class="input-group date" id="bs-datepicker-component">
-									<input type="text" class="form-control" id="semestre-letivo" placeholder="Semestre Letivo" name="semestre_letivo"/><span class="input-group-addon" required><i class="fa fa-calendar"></i></span>
-		          				</div>
-		      				</div>
 							<div class="col-sm-2">
 								<div class="form-group no-margin-hr">
 									<label class="control-label">Área(s)</label>
@@ -116,19 +110,16 @@ include_once "head.php";
 </script>
 
 
-<script>
-
-	jQuery("#quantidade_orientacoes").mask("9");
-</script>
-
-
 <script src="assets/javascripts/localization/messages_pt_BR.js"></script>
 <script type="text/javascript">
 	$().ready(function(){
 		$('#cadastro-professor').validate({
 			rules: {
-				// nome: { required: true },
+				nome: { required: true },
 				matricula: { required: true, minlength: 6, maxlength:6, number: true },
+				email: { required: true, email:true },
+				quantidade_orientacoes: {required: true, number: true},
+				disciplina: { required: true }
 			},
 			submitHandler: function(form){
 				var dados = $(form).serialize();

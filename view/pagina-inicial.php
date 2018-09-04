@@ -23,6 +23,9 @@ include_once "head.php";
 					<a class="btn btn-primary btn-block btn-lg" href="solicitacao-de-orientacao.php">Solicitação de orientação</a>		
 				</div> <!-- / .form-actions -->
 				<div class="form-actions">
+					<a class="btn btn-primary btn-block btn-lg" href="professores.php">Professores</a>		
+				</div> <!-- / .form-actions -->
+				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="aprovar-solicitacao-de-orientacao.php">Aprovar Solicitação de orientacao</a>		
 				</div> <!-- / .form-actions -->
 				<!-- <div class="form-actions">

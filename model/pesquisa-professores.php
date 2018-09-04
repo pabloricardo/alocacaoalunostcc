@@ -37,7 +37,7 @@
 			       <?php
 			     }     
 			   }else{
-			   	echo "Nenhum usuário encontrado com os filtros informados.";
+			   	echo "Dados não encontrado com os filtros informados.";
 			   }
 
 			mysqli_close($link);
