@@ -41,13 +41,13 @@
 		</a> <!-- / .logo -->
 	</div> <!-- / .header -->
 
-	<div class="error-code">404</div>
+	<div class="error-code">Em Desenvolvimento</div>
 
 	<div class="error-text">
 		<span class="oops">OOPS!</span><br>
 		<span class="hr"></span>
 		<br>
-		Página não encontrada
+		Página em desenvolvimento
 	</div> <!-- / .error-text -->
 
 	<form action="" class="search-form">

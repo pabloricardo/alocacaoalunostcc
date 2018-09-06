@@ -11,11 +11,12 @@ $disciplina = $_POST['disciplina'];
 // $semestre_letivo = date('Y-m-d', strtotime($semestre_letivo));
 $area = $_POST['area'];
 $quantidade_orientacoes = $_POST['quantidade_orientacoes'];
+$status = $_POST['status'];
 
 $link = DBConnect();
 
-$query = "insert into professores (nome, matricula, disciplina, area, quantidade_orientacoes , email ) 
-values ('$nome' , $matricula, '$disciplina', '$area', $quantidade_orientacoes, '$email')";
+$query = "insert into professores (nome, matricula, disciplina, area, quantidade_orientacoes , email, status ) 
+values ('$nome' , $matricula, '$disciplina', '$area', $quantidade_orientacoes, '$email', '$status')";
 
 
 if($link->query($query)){ 

@@ -1,7 +1,6 @@
 <?php
 //include_once "conferir-autenticacao.php";
 include_once "mensagens.php"; 
-$titulo =  $doacoesSa;
 include_once "head.php"; 
 ?>
 
@@ -18,21 +17,26 @@ include_once "head.php";
 		<div class="signin-form">
 				<div class="signin-text">
 				</div> <!-- / .signin-text -->		
-
 				<div class="form-actions">
-					<a class="btn btn-primary btn-block btn-lg" href="solicitacao-de-orientacao.php">Solicitação de orientação</a>		
+					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Alunos</a>		
 				</div> <!-- / .form-actions -->
 				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="professores.php">Professores</a>		
 				</div> <!-- / .form-actions -->
 				<div class="form-actions">
-					<a class="btn btn-primary btn-block btn-lg" href="aprovar-solicitacao-de-orientacao.php">Aprovar Solicitação de orientacao</a>		
+					<a class="btn btn-primary btn-block btn-lg" href="areas.php">Áreas</a>		
+				</div> <!-- / .form-actions -->
+				<div class="form-actions">
+					<a class="btn btn-primary btn-block btn-lg" href="solicitacao-de-orientacao.php">Solicitação de orientação</a>		
+				</div> <!-- / .form-actions -->
+				<div class="form-actions">
+					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Aprovar Solicitação de orientacao</a>		
 				</div> <!-- / .form-actions -->
 				<!-- <div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="cadastro-receptor.php">Receptor</a>		
 				</div> / .form-actions -->
 				<div class="form-actions">
-					<a class="btn btn-primary btn-block btn-lg" href="relatorio.php">Relatório</a>		
+					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Relatório</a>		
 				</div> <!-- / .form-actions -->
 				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="index.php">Sair</a>		
