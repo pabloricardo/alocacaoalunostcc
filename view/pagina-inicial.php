@@ -18,7 +18,7 @@ include_once "head.php";
 				<div class="signin-text">
 				</div> <!-- / .signin-text -->		
 				<div class="form-actions">
-					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Alunos</a>		
+					<a class="btn btn-primary btn-block btn-lg" href="aluno.php">Alunos</a>		
 				</div> <!-- / .form-actions -->
 				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="professores.php">Professores</a>		
