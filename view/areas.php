@@ -3,8 +3,7 @@
 		include_once "mensagens.php"; 
 		$titulo = $areas;
 		include_once "head.php"; 
-		include_once "modal-visualizar-dados-professor.php";
-		include_once "modal-editar-dados-professor.php";
+		include_once "modal-editar-dados-area.php";
 		?>
 
 <body class="theme-default main-menu-animated">
@@ -38,7 +37,7 @@
 	<form id="pesquisar-area">
 		<div class="panel panel-default col-md-offset-1 col-md-10">
 			<div class="panel-heading">
-				<h1 class="panel-title text-center">Professores</h1>
+				<h1 class="panel-title text-center">Áreas</h1>
 			</div>
 			<div class="panel-body">
 				<div class="row">
@@ -50,7 +49,7 @@
 			</div>
 			<div class="panel-footer text-right">
 				<a class="btn btn-warning" href="cadastro-area.php">Incluir</a>
-				<button class="btn btn-default" type="reset" onclick="focusPrimeiroCampo('table-area');">Limpar</button>
+				<button class="btn btn-default" id="limpar" type="reset" onclick="focusPrimeiroCampo('table-area');">Limpar</button>
 				<button class="btn btn-primary" id="btn-pesquisar" type="submit">Pesquisar</button>
 			</div>
 		</div>
@@ -70,6 +69,7 @@
 									<thead>
 										<tr>
 											<th>Área</th>
+											<th>Ações</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -108,59 +108,41 @@
 	</script>
 
 	<!-- Função ajax para deletar-->
-	<!-- <script>
-		function deletarUsuario(cpf){
+	<script>
+		function deletarArea(id_area){
 			var confirmacao = confirm("Confirma a exclusão?");
 			if (confirmacao == true) {
-				var dados = cpf;
+				var dados = id_area;
 				jQuery.ajax({
 					type: "POST",
-					url: "../model/deletar-usuario.php",
-					data: "cpf="+cpf,
+					url: "../model/deletar-area.php",
+					data: "id_area=" + id_area,
 					success: function(data)
 					{
+						alert(data);
 						$('#btn-pesquisar').click();
-						alert("Usuário Removido Com Sucesso");
+						alert("Removido Com Sucesso");
 					}
 				});		
 			}else {
 				alert("Operação Cancelada");
 			}					
 		};
-	</script> -->
-
-	<!-- Função ajax para visualizar-->
-	<script>
-		function visualizarProfessor(matricula){
-			jQuery.ajax({
-				type: "POST",
-				url: "../model/visualizar-professor.php",
-				data: "matricula="+matricula,
-				success: function(data)
-					{
-						data = JSON.parse(data);	
-						$('#visualizar-nome').val(data.nome);
-						$('#visualizar-email').val(data.email);
-						$('#visualizar-matricula').val(data.matricula);
-					}
-				});						
-		};
 	</script>
 
-	<!-- Função ajax para editar-->
+
+	<!-- Função ajax para editar -->
 	<script>
-		function editarProfessor(matricula){
+		function editarArea(id_area){
 			jQuery.ajax({
 				type: "POST",
-				url: "../model/modal-editar-dados-professor.php",
-				data: "matricula="+matricula,
+				url: "../model/modal-editar-dados-area.php",
+				data: "id_area="+id_area,
 				success: function(data)
 					{
 						data = JSON.parse(data);	
-						$('#editar-nome').val(data.nome);
-						$('#editar-email').val(data.email);
-						$('#matricula-nova').val(data.matricula);
-						$('#matricula-antiga').val(data.matricula);
+						$('#editar-nome').val(data.nome_da_area);
+						$('#id-area').val(data.id_area);
 					}
 				});						
 		};

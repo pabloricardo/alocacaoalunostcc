@@ -27,16 +27,40 @@
 						<input type="email" name="editar-email" id="editar-email" class="form-control">
 					</div>
 				</div>	
-			</div>
+			</div><!-- row -->
+			<div class="row">
+					<div class="col-sm-2">
+						<label for="sel1">Disciplina</label>
+						<select class="form-control" id="editar-disciplina" name="editar-disciplina">
+							<option value="" selected>Selecione</option>
+							<option >TCC01</option>
+							<option>TCC02</option>
+							<option>Ambas</option>
+						</select>
+					</div>
+						<div class="col-sm-3">
+							<div class="form-group no-margin-hr">
+								<label class="control-label">Quantidade de orientações</label>
+								<input id="editar-quantidade_orientacoes" name="editar-quantidade_orientacoes" class="form-control" placeholder="Quantidade de orientações">
+							</div>
+						</div>	
+					<div class="col-sm-2">
+						<label for="sel1">Status</label>
+						<select class="form-control" id="editar-status" name="editar-status">
+							<option selected>Ativo</option>
+							<option>Inativo</option>
+						</select>
+					</div>
+			</div><!-- row -->			
 				<input type="text" id="matricula-antiga"  name="matricula-antiga" hidden>
 			</div>
         </div>
         <div class="modal-footer">
           <button id="editar-dados" class="btn btn-primary">Salvar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-        </div>
       </div>
     </div>
+  </div>
 </form>
 
 	<script>

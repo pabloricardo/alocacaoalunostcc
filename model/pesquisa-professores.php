@@ -13,7 +13,7 @@
 					 if( $nome ){ $where[] = "nome LIKE '{$nome}%'"; } 
 					 if( $matricula ){ $where[] = "matricula = {$matricula}"; } 
 					//Monta a query dinamica
-					 $sql = "SELECT nome, matricula FROM professores ";
+					 $sql = "SELECT * FROM professores ";
 					if( sizeof( $where ) )
 						$sql .= ' WHERE '.implode( ' AND ',$where );
 					//echo $sql; imrpime a query montada
@@ -28,6 +28,7 @@
 			       		<tr>
 			       			<td><?php echo $row['nome'] ?></td>
 			       			<td><?php echo $row['matricula'] ?></td>
+							<td><?php echo $row['status'] ?></td>
 			       			<td class="acoes-pesquisa-usuario">
 			       			<i class="btn btn-default btn-xs fa fa-pencil-square-o" aria-hidden="true" data-toggle="modal" data-target="#modal-editar-dados-professor"  onclick="editarProfessor(<?php echo $row['matricula'] ?>)"></i>
 			       			<!-- <button type="submit" onclick="deletarUsuario(<?php echo $row['CPF'] ?>)" class="btn btn-danger btn-xs"><i class="fa fa-times" aria-hidden="true"></i></button> -->

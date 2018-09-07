@@ -92,6 +92,7 @@
 										<tr>
 											<th>Nome</th>
 											<th>Matrícula</th>
+											<th>Status</th>
 											<th>Ações</th>
 										</tr>
 									</thead>
@@ -183,6 +184,9 @@
 						data = JSON.parse(data);	
 						$('#editar-nome').val(data.nome);
 						$('#editar-email').val(data.email);
+						$('#editar-disciplina').val(data.disciplina);
+						$('#editar-quantidade_orientacoes').val(data.quantidade_orientacoes);
+						$('#editar-status').val(data.status);
 						$('#matricula-nova').val(data.matricula);
 						$('#matricula-antiga').val(data.matricula);
 					}

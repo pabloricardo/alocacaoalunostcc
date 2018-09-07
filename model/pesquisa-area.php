@@ -25,11 +25,11 @@
 			       ?>
 			       		<tr>
 			       			<td><?php echo $row['nome_da_area'] ?></td>
-			       			<!-- <td class="acoes-pesquisa-usuario"> -->
-			       			<!-- <i class="btn btn-default btn-xs fa fa-pencil-square-o" aria-hidden="true" data-toggle="modal" data-target="#modal-editar-dados-professor"  onclick="editarProfessor(<?php echo $row['matricula'] ?>)"></i> -->
-			       			<!-- <button type="submit" onclick="deletarUsuario(<?php echo $row['CPF'] ?>)" class="btn btn-danger btn-xs"><i class="fa fa-times" aria-hidden="true"></i></button> -->
+			       			<td class="acoes-pesquisa-usuario">
+			       			<i class="btn btn-default btn-xs fa fa-pencil-square-o" aria-hidden="true" data-toggle="modal" data-target="#modal-editar-dados-area"  onclick="editarArea(<?php echo $row['id_area'] ?>)"></i>
+			       			<button type="submit" onclick="deletarArea(<?php echo $row['id_area'] ?>)" class="btn btn-danger btn-xs"><i class="fa fa-times" aria-hidden="true"></i></button>
 			       			<!-- <i class="btn btn-default btn-xs fa fa-eye" aria-hidden="true" data-toggle="modal" data-target="#modal-visualizar-professor" onclick="visualizarProfessor(<?php echo $row['matricula'] ?>)"></i> -->
-			       			<!-- </td> -->
+			       			</td>
 			       		</tr>
 			       <?php
 			     }     

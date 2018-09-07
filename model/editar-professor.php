@@ -7,13 +7,15 @@
 	$novaMatricula = $_POST['matricula-nova'];
 	$nome = $_POST['editar-nome'];
 	$email = $_POST['editar-email'];
-	
-
+	$disciplina = $_POST['editar-disciplina'];
+	$quantidade_orientacoes = $_POST['editar-quantidade_orientacoes'];
+	$status = $_POST['editar-status'];
 
 //$sql="UPDATE {$tbl_name} SET state='{$state}', zip='{$zip}' WHERE custnum='{$custnum}'" $novoCpf = $_POST['editar-cpf']; CPF = '{$novoCpf}';
 
 	$update = "UPDATE `professores` 
-	SET matricula = $novaMatricula, nome = '$nome', email = '$email'
+	SET matricula = $novaMatricula, nome = '$nome', email = '$email', 
+	disciplina = '$disciplina', quantidade_orientacoes = $quantidade_orientacoes, status = '$status'
 	WHERE matricula = $matriculaAntiga";
 	$alterar = $link->query($update);
 
