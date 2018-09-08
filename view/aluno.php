@@ -26,7 +26,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Professores<span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="#">Alunos<span class="sr-only">(current)</span></a></li>
 					<li><a href="pagina-inicial.php">Página Inicial</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
@@ -37,47 +37,31 @@
 	<form id="pesquisar-form">
 		<div class="panel panel-default col-md-offset-1 col-md-10">
 			<div class="panel-heading">
-				<h1 class="panel-title text-center">Professores</h1>
+				<h1 class="panel-title text-center">Alunos</h1>
 			</div>
 			<div class="panel-body">
 				<div class="row">
-					<?php
-					#chama o arquivo de configuração com o banco
-					require './config.php';
-					require './connection.php';
-					$link = DBConnect();
-					#seleciona os dados da tabela produto
-					$sql = "SELECT nome FROM `professores`";
-					$result = $link->query($sql);
-					?>
-					<div class="col-sm-6">
-						<div class="form-group no-margin-hr">
-							<label for="sel1">Nome</label>
-							<select class="form-control" id="nome" name="nome">
-								<option selected value>Selecione</option>
-								<?php  while($row = $result->fetch_assoc()) {?>
-								<option value="<?php echo $row['nome'] ?>"><?php echo $row['nome'] ?></option>
-								<?php } ?>
-							</select>
-						</div>
-					</div>
+					<div class="col-sm-5">
+						<label class="control-label">Nome</label>
+						<input type="text" id = "nome" name="nome" class="form-control" placeholder="Nomes">
+					</div>		
 					<div class="col-sm-2">
 						<div class="form-group no-margin-hr">
 							<label class="control-label">Matrícula</label>
 							<input id="matricula" name="matricula" class="form-control" placeholder="Matrícula">
 						</div>
-					</div>					
+					</div>		
 				</div><!-- row -->						
 			</div>
 			<div class="panel-footer text-right">
-				<a class="btn btn-warning" href="cadastro-professor.php">Incluir</a>
-				<button class="btn btn-default" type="reset" onclick="focusPrimeiroCampo('table-pesquisa-professores');">Limpar</button>
+				<a class="btn btn-warning" href="cadastro-aluno.php">Incluir</a>
+				<button class="btn btn-default" type="reset" onclick="focusPrimeiroCampo('table-pesquisa');">Limpar</button>
 				<button class="btn btn-primary" id="btn-pesquisar" type="submit">Pesquisar</button>
 			</div>
 		</div>
 	</form>
 
-	<div id="table-pesquisa-professores" class="table-info display-none col-md-offset-1 col-md-10 padding-left-right-none">
+	<div id="table-pesquisa" class="table-info display-none col-md-offset-1 col-md-10 padding-left-right-none">
 		<div class="panel">
 			<div class="panel-heading text-center">
 				<span class="panel-title">Resultado da pesquisa</span>
@@ -92,7 +76,7 @@
 										<tr>
 											<th>Nome</th>
 											<th>Matrícula</th>
-											<th>Status</th>
+											<th>E-mail</th>
 											<th>Ações</th>
 										</tr>
 									</thead>
@@ -118,12 +102,12 @@
 					var dados = $(form).serialize();
 					$.ajax({
 						type: "POST",
-						url: "../model/pesquisa-professores.php",
+						url: "../model/pesquisa-alunos.php",
 						data: dados,
 						success: function( data )
 						{
 							$('tbody').html(data);
-							$("#table-pesquisa-professores").show();
+							$("#table-pesquisa").show();
 						}
 					});
 					return false;
@@ -133,28 +117,28 @@
 	</script>
 
 	<!-- Função ajax para deletar-->
-	<!-- <script>
-		function deletarUsuario(cpf){
+	 <script>
+		function deletarAluno(matricula){
 			var confirmacao = confirm("Confirma a exclusão?");
 			if (confirmacao == true) {
-				var dados = cpf;
+				var dados = matricula;
 				jQuery.ajax({
 					type: "POST",
-					url: "../model/deletar-usuario.php",
-					data: "cpf="+cpf,
+					url: "../model/deletar-aluno.php",
+					data: "matricula="+matricula,
 					success: function(data)
 					{
 						$('#btn-pesquisar').click();
-						alert("Usuário Removido Com Sucesso");
+						alert("Removido Com Sucesso");
 					}
 				});		
 			}else {
 				alert("Operação Cancelada");
 			}					
 		};
-	</script> -->
+	</script>
 
-	<!-- Função ajax para visualizar-->
+	<!-- Função ajax para visualizar
 	<script>
 		function visualizarProfessor(matricula){
 			jQuery.ajax({
@@ -170,23 +154,20 @@
 					}
 				});						
 		};
-	</script>
+	</script> -->
 
 	<!-- Função ajax para editar-->
 	<script>
-		function editarProfessor(matricula){
+		function editarAluno(matricula){
 			jQuery.ajax({
 				type: "POST",
-				url: "../model/modal-editar-dados-professor.php",
+				url: "../model/modal-editar-dados-aluno.php",
 				data: "matricula="+matricula,
 				success: function(data)
 					{
 						data = JSON.parse(data);	
 						$('#editar-nome').val(data.nome);
 						$('#editar-email').val(data.email);
-						$('#editar-disciplina').val(data.disciplina);
-						$('#editar-quantidade_orientacoes').val(data.quantidade_orientacoes);
-						$('#editar-status').val(data.status);
 						$('#matricula-nova').val(data.matricula);
 						$('#matricula-antiga').val(data.matricula);
 					}

@@ -1,7 +1,7 @@
 <?php
 //include_once "conferir-autenticacao.php"; 
 include_once "mensagens.php"; 
-$titulo = $cadastrarArea;
+$titulo = $cadastrarAlunos;
 include_once "head.php"; 
 ?>
 
@@ -23,7 +23,7 @@ include_once "head.php";
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Cadastrar Área<span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="#">Cadastrar Alunos<span class="sr-only">(current)</span></a></li>
 					<li><a href="pagina-inicial.php">Página Inicial</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
@@ -32,10 +32,10 @@ include_once "head.php";
 
 
 	<div class="text-center mensagem-inserir display-none alert"></div>
-	<form id="cadastro-professor">
+	<form id="cadastro-aluno">
 		<div class="panel panel-default col-md-offset-1 col-md-10">
 			<div class="panel-heading">
-				<h1 class="panel-title text-center">Cadastrar Área</h1>
+				<h1 class="panel-title text-center">Cadastrar Alunos</h1>
 			</div>
 			<div class="panel-body">
 				<div class="row">
@@ -44,11 +44,23 @@ include_once "head.php";
 							<label class="control-label">Nome</label>
 							<input type="text" name="nome" class="form-control" placeholder="Nome" autofocus>
 						</div>
-					</div>			
-				</div><!-- row -->			
+					</div>
+					<div class="col-sm-2">
+						<div class="form-group no-margin-hr">
+							<label class="control-label">Matrícula</label>
+							<input id="matricula" name="matricula" class="form-control" placeholder="Matrícula">
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group no-margin-hr">
+							<label class="control-label">E-Mail</label>
+							<input type="text" name="email" class="form-control" placeholder="E-Mail">
+						</div>
+					</div>
+				</div><!-- row -->		
 			</div>
 			<div class="panel-footer text-right">
-				<a class="btn btn-default" href="areas.php">Cancelar</a>
+				<a class="btn btn-default" href="aluno.php">Cancelar</a>
 				<button class="btn btn-primary" id="btn-salvar" type="submit">Salvar</button>
 			</div>
 		</div>
@@ -78,15 +90,17 @@ include_once "head.php";
 <script src="assets/javascripts/localization/messages_pt_BR.js"></script>
 <script type="text/javascript">
 	$().ready(function(){
-		$('#cadastro-professor').validate({
+		$('#cadastro-aluno').validate({
 			rules: {
 				nome: { required: true },
+				matricula: { required: true, minlength: 6, maxlength:6, number: true },
+				email: { required: true, email:true },
 			},
 			submitHandler: function(form){
 				var dados = $(form).serialize();
 				jQuery.ajax({
 					type: "POST",
-					url: "../model/cadastro-area.php",
+					url: "../model/cadastro-aluno.php",
 					data: dados,
 					success: function(data)
 					{
@@ -96,7 +110,7 @@ include_once "head.php";
 							$("div.mensagem-inserir").show();
 							$("div.mensagem-inserir").addClass("alert-success");
 	        				$("div.mensagem-inserir").html(data.mensagem);
-	        				$('#cadastro-professor').each (function(){this.reset();});
+	        				$('#cadastro-aluno').each (function(){this.reset();});
 						}
 						else{
 							$("div.mensagem-inserir").show();

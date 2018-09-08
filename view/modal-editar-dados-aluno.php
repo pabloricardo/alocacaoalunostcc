@@ -1,11 +1,11 @@
 <!-- / Inicio modal -->
 <form id="editar">
-  <div class="modal fade" id="modal-editar-dados-professor" role="dialog" tabindex="-1">
+  <div class="modal fade" id="modal-editar-dados-aluno" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header modal-header-warning">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title text-center">Editar Dados Do Professor</h4>
+          <h4 class="modal-title text-center">Editar Dados Do Aluno</h4>
         </div>
 		<div class="modal-body">
 			<div class="row">
@@ -27,31 +27,7 @@
 						<input type="email" name="editar-email" id="editar-email" class="form-control">
 					</div>
 				</div>	
-			</div><!-- row -->
-			<div class="row">
-					<div class="col-sm-2">
-						<label for="sel1">Disciplina</label>
-						<select class="form-control" id="editar-disciplina" name="editar-disciplina">
-							<option value="" selected>Selecione</option>
-							<option >TCC01</option>
-							<option>TCC02</option>
-							<option>Ambas</option>
-						</select>
-					</div>
-						<div class="col-sm-3">
-							<div class="form-group no-margin-hr">
-								<label class="control-label">Quantidade de orientações</label>
-								<input id="editar-quantidade_orientacoes" name="editar-quantidade_orientacoes" class="form-control" placeholder="Quantidade de orientações">
-							</div>
-						</div>	
-					<div class="col-sm-2">
-						<label for="sel1">Status</label>
-						<select class="form-control" id="editar-status" name="editar-status">
-							<option selected>Ativo</option>
-							<option>Inativo</option>
-						</select>
-					</div>
-			</div><!-- row -->			
+			</div><!-- row -->		
 				<input type="text" id="matricula-antiga"  name="matricula-antiga" hidden>
 			</div>
         </div>
@@ -69,7 +45,7 @@
 				var dados = $('#editar').serialize();
 				jQuery.ajax({
 					type: "POST",
-					url: "../model/editar-professor.php",
+					url: "../model/editar-aluno.php",
 					data: dados,
 					success: function(data)
 					{

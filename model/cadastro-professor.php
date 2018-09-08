@@ -20,7 +20,7 @@ values ('$nome' , $matricula, '$disciplina', '$area', $quantidade_orientacoes, '
 
 
 if($link->query($query)){ 
-	$retorno = array('mensagem' => "Professor Cadastrado com Sucesso", 'status' => true);
+	$retorno = array('mensagem' => "Cadastrado com Sucesso", 'status' => true);
 } else{ 
 	$retorno = array('mensagem' => "Matrícula Já Cadastrada");
 } 
