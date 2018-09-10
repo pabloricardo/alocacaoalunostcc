@@ -48,7 +48,7 @@
 					<div class="col-sm-2">
 						<div class="form-group no-margin-hr">
 							<label class="control-label">Matrícula</label>
-							<input id="matricula" name="matricula" class="form-control" placeholder="Matrícula">
+							<input id="matricula" name="matricula" class="form-control" placeholder="Matrícula" maxlength= "6">
 						</div>
 					</div>		
 				</div><!-- row -->						

@@ -53,14 +53,16 @@ include_once "head.php";
 				</div> <!-- / .signin-text -->
 
 				<div class="form-group w-icon">
-					<input type="text" name="cpf" id="cpf" class="form-control input-lg" placeholder="CPF (Somente os números do CPF)" required title="Digite apenas os números do seu CPF">
+					<input type="text" name="matricula" id="matricula" class="form-control input-lg" placeholder="Matrícula" maxlength= "6" required autofocus>
+					<span class="fa fa-lock signin-form-icon"></span>
+				</div> <!-- / Password -->
+
+				<div class="form-group w-icon">
+					<input type="password" name="senha" id="senha" class="form-control input-lg" placeholder="Senha" required >
 					<span class="fa fa-user signin-form-icon"></span>
 				</div> <!-- / Username -->
 
-				<div class="form-group w-icon">
-					<input type="password" name="matriciula" id="matricula" class="form-control input-lg" placeholder="Matrícula" maxlength= "6" required>
-					<span class="fa fa-lock signin-form-icon"></span>
-				</div> <!-- / Password -->
+
 				<div>
 					<a href="#" class="forgot-password link-esquecer-senha" data-toggle="modal" data-target="#modal-recuperar-senha" id="recuperar-senha">Equeceu sua senha?</a>
 				</div>
@@ -121,32 +123,6 @@ include_once "head.php";
 	<!-- / Fim do modal-recuperar-senha -->
 
 
-
-<!-- Função ajax do login
-<script>
-	$(document).ready(function(){
-		$('#btn-login').click(function(){
-			var dados = $('#login-form').serialize();
-			jQuery.ajax({
-				type: "POST",
-				url: "conferir-login.php",
-				data: dados,
-				success: function(data)
-				{
-					if(data == 1)
-						window.location.href = "pagina-inicial.php";
-					else{
-						$("div.mensagem-erro").show();
-        				$("div.mensagem-erro").html(data);
-        				$("input[id=cpf]").focus();			
-					}
-				}
-			});			
-			return false;
-		});
-	});
-</script>-->
-
 <!-- Função ajax recuperar senha-->
 <script>
 	$(document).ready(function(){
@@ -186,72 +162,32 @@ include_once "head.php";
 <!-- Pixel Admin's javascripts -->
 <script src="assets/javascripts/bootstrap.min.js"></script>
 <script src="assets/javascripts/pixel-admin.min.js"></script>
-
+<script src="assets/javascripts/localization/messages_pt_BR.js"></script>
 <script>
-jQuery("#cpf").mask("99999999999");
-jQuery.validator.addMethod("cpf", function(value, element) {
-   value = jQuery.trim(value);
-
-    value = value.replace('.','');
-    value = value.replace('.','');
-    cpf = value.replace('-','');
-    while(cpf.length < 11) cpf = "0"+ cpf;
-    var expReg = /^0+$|^1+$|^2+$|^3+$|^4+$|^5+$|^6+$|^7+$|^8+$|^9+$/;
-    var a = [];
-    var b = new Number;
-    var c = 11;
-    for (i=0; i<11; i++){
-        a[i] = cpf.charAt(i);
-        if (i < 9) b += (a[i] * --c);
-    }
-    if ((x = b % 11) < 2) { a[9] = 0 } else { a[9] = 11-x }
-    b = 0;
-    c = 11;
-    for (y=0; y<10; y++) b += (a[y] * c--);
-    if ((x = b % 11) < 2) { a[10] = 0; } else { a[10] = 11-x; }
-
-    var retorno = true;
-    if ((cpf.charAt(9) != a[9]) || (cpf.charAt(10) != a[10]) || cpf.match(expReg)) retorno = false;
-
-    return this.optional(element) || retorno;
-
-}, "Informe um CPF válido");
-
 $("#login-form").validate({
   rules: {
-    cpf: {
-      cpf: true,
-      required: true,
-    },
-     senha: {
-      required: true,
-      minlength: 3
-    }
-  },
-  messages: {
-    cpf: {
-      required: "Campo Obrigatório",
-      cpf: 'CPF inválido'
-    },
     senha: {
-      required: "Campo Obrigatório",
-      minlength: jQuery.validator.format("No mínimo {0} characters!")
+      required: true
+    },
+	matricula: {
+      required: true,
+      number: true,
     }
   },
   submitHandler: function(form) {
       	var dados = $('#login-form').serialize();
 			jQuery.ajax({
 				type: "POST",
-				url: "conferir-login.php",
+				url: "../model/conferir-login.php",
 				data: dados,
 				success: function(data)
 				{
+					alert(data);
 					if(data == 1)
 						window.location.href = "pagina-inicial.php";
 					else{
 						$("div.mensagem-erro").show();
-        				$("div.mensagem-erro").html(data);
-        				$("input[id=cpf]").focus();			
+        				$("div.mensagem-erro").html(data);	
 					}
 				}
 			});			
@@ -259,12 +195,6 @@ $("#login-form").validate({
   }
 });
 </script>
-
-<script>
-jQuery("#cpf-recuperar-senha").mask("99999999999");
-</script>
-
-
 
 <script>
 	init.push(function () {

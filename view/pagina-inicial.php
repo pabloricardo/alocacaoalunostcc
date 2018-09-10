@@ -1,5 +1,5 @@
 <?php
-//include_once "conferir-autenticacao.php";
+include_once "conferir-autenticacao.php";
 include_once "mensagens.php"; 
 include_once "head.php"; 
 ?>
@@ -41,6 +41,8 @@ include_once "head.php";
 				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="index.php">Sair</a>		
 				</div> <!-- / .form-actions -->			
+				<!-- <?php var_dump($_SESSION); echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>'?> -->
+				<?php echo $_SESSION['matricula'] ?>
 		</div>
 	</div>
 

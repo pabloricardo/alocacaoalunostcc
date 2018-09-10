@@ -3,9 +3,6 @@
 include_once "mensagens.php"; 
 $titulo = "SolicitacaoDeOrientacao";
 include_once "head.php"; 
-include_once "modal-visualizar-dados-item.php";
-include_once "modal-editar-dados-item.php";
-include_once "modal-efetuar-doacao.php";
 ?>
 
 <body class="theme-default main-menu-animated">
@@ -44,30 +41,27 @@ include_once "modal-efetuar-doacao.php";
 			</div>
 			<div class="panel-body">
 				<div class="row">
+				<?php
+					#chama o arquivo de configuração com o banco
+					require './config.php';
+					require './connection.php';
+					$link = DBConnect();
+					#seleciona os dados da tabela produto
+					$sql = "SELECT nome FROM `professores` Where status = 'Ativo'";
+					$result = $link->query($sql);
+					?>
 					<div class="col-sm-6">
 						<div class="form-group no-margin-hr">
-							<label class="control-label">Nome do(a) Professor(a)</label>
-							<input type="text" class="form-control" placeholder="Professor(a)" id="nomeProfessor"  name="nomeProfessor" autofocus>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="form-group no-margin-hr">
-							<label for="tipo">Área de orientação</label>
-							<select class="form-control" name="areaorientacao" id="areaorientacao" >
-							<option value="">Selecione</option>
-				      		<optgroup label="Área de orientação x">
-				      		<option value = "x1">x1</option>
-					      	<option>x2</option>
-					      	<option>x3</option>
-					      	<option>x4</option>
-					      	</optgroup>		
-							<optgroup label="Área de orientação y">
-				      		<option value = "y1">y1</option>
-					      	<option>y2</option>
-					      	</optgroup>				    	
+							<label for="sel1">Nome</label>
+							<select class="form-control" id="nome" name="nome">
+								<option selected value>Selecione</option>
+								<?php  while($row = $result->fetch_assoc()) {?>
+								<option value="<?php echo $row['nome'] ?>"><?php echo $row['nome'] ?></option>
+								<?php } ?>
 							</select>
 						</div>
 					</div>
+
 				</div><!-- row -->
 			</div>
 			<div class="panel-footer text-right">
