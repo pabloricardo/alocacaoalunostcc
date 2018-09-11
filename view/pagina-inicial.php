@@ -16,10 +16,11 @@ include_once "head.php";
 	<div class="signin-container">
 		<div class="signin-form">
 				<div class="signin-text">
-				</div> <!-- / .signin-text -->		
+				</div> <!-- / .signin-text -->
+				<?php if($_SESSION['permissao'] == 3){?>	
 				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="aluno.php">Alunos</a>		
-				</div> <!-- / .form-actions -->
+				</div> <!-- / .form-actions -->	
 				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="professores.php">Professores</a>		
 				</div> <!-- / .form-actions -->
@@ -27,22 +28,22 @@ include_once "head.php";
 					<a class="btn btn-primary btn-block btn-lg" href="areas.php">Áreas</a>		
 				</div> <!-- / .form-actions -->
 				<div class="form-actions">
+					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Relatório</a>		
+				</div> <!-- / .form-actions -->
+				<?php }	?>	
+				<?php if($_SESSION['permissao'] == 1 || $_SESSION['permissao'] == 3){?>	
+				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="solicitacao-de-orientacao.php">Solicitação de orientação</a>		
 				</div> <!-- / .form-actions -->
+				<?php }	?>
+				<?php if($_SESSION['permissao'] == 2 || $_SESSION['permissao'] == 3){?>	
 				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Aprovar Solicitação de orientacao</a>		
 				</div> <!-- / .form-actions -->
-				<!-- <div class="form-actions">
-					<a class="btn btn-primary btn-block btn-lg" href="cadastro-receptor.php">Receptor</a>		
-				</div> / .form-actions -->
-				<div class="form-actions">
-					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Relatório</a>		
-				</div> <!-- / .form-actions -->
+				<?php }	?>
 				<div class="form-actions">
 					<a class="btn btn-primary btn-block btn-lg" href="index.php">Sair</a>		
 				</div> <!-- / .form-actions -->			
-				<!-- <?php var_dump($_SESSION); echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>'?> -->
-				<?php echo $_SESSION['matricula'] ?>
 		</div>
 	</div>
 

@@ -9,7 +9,6 @@ if ( !isset($_SESSION['matricula']) and !isset($_SESSION['senha']) ) {
 	// Limpa
 	unset ($_SESSION['matricula']);
 	unset ($_SESSION['senha']);	
-	$loggenOnUser=$_SESSION['matricula'];
 	// Redireciona para a página de autenticação
 	header('location:index.php');
 }

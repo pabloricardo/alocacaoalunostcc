@@ -13,7 +13,12 @@
 	$update = "UPDATE `alunos` 
 	SET matricula = $novaMatricula, nome = '$nome', email = '$email'
 	WHERE matricula = $matriculaAntiga";
-	$alterar = $link->query($update);
+	$link->query($update);
+
+	$updateAlunoComoUsuario = "UPDATE `usuario` 
+	SET matricula = $novaMatricula
+	WHERE matricula = $matriculaAntiga";
+	$link->query($updateAlunoComoUsuario);
 
 
 	$sql = "SELECT * FROM `alunos` WHERE matricula = $novaMatricula";

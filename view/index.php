@@ -2,6 +2,8 @@
 include_once "mensagens.php"; 
 $titulo =  $login;
 include_once "head.php"; 
+session_start();
+session_destroy();
 ?>
 
 
@@ -182,9 +184,10 @@ $("#login-form").validate({
 				data: dados,
 				success: function(data)
 				{
-					alert(data);
 					if(data == 1)
 						window.location.href = "pagina-inicial.php";
+					else if(data == 2)
+					window.location.href = "cadastrar-senha.php";
 					else{
 						$("div.mensagem-erro").show();
         				$("div.mensagem-erro").html(data);	

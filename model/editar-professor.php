@@ -19,6 +19,11 @@
 	WHERE matricula = $matriculaAntiga";
 	$alterar = $link->query($update);
 
+	$updateProfessorComoUsuario = "UPDATE `usuario` 
+	SET matricula = $novaMatricula
+	WHERE matricula = $matriculaAntiga";
+	$link->query($updateProfessorComoUsuario);
+
 
 	$sql = "SELECT * FROM `professores` WHERE matricula = $novaMatricula";
 	$result = $link->query($sql);

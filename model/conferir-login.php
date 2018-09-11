@@ -17,7 +17,10 @@
       $_SESSION['senha'] = $senha;
       $_SESSION['permissao'] = $row['permissao'];
       mysqli_close($link);
+      if($matricula != $senha)
       echo 1;
+      else
+      echo 2;
     } else {
       if(empty($cpf) && empty($matricula))
         echo "Por Favor Preencher Senha e CPF"; 

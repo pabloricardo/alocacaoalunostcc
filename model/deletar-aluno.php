@@ -8,7 +8,10 @@
     $link = DBConnect();
     
     $sql = "DELETE FROM alunos WHERE matricula = $matricula";
+    $deletarAlunoComoUsuario = "DELETE FROM usuario WHERE matricula = $matricula";
+
     $link->query($sql);
+    $link->query($deletarAlunoComoUsuario);
     //echo($sql);
 	mysqli_close($link);
 ?>

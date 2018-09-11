@@ -12,6 +12,11 @@ $link = DBConnect();
 $query = "insert into alunos (nome, matricula, email ) 
 values ('$nome' , $matricula, '$email')";
 
+$cadastraAlunoComoUsuario = "insert into usuario (matricula, senha, permissao)
+values ($matricula, '$matricula', 1 )";
+
+$link->query($cadastraAlunoComoUsuario);
+
 
 if($link->query($query)){ 
 	$retorno = array('mensagem' => "Cadastrado com Sucesso", 'status' => true);

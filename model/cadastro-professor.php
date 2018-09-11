@@ -18,6 +18,9 @@ $link = DBConnect();
 $query = "insert into professores (nome, matricula, disciplina, area, quantidade_orientacoes , email, status ) 
 values ('$nome' , $matricula, '$disciplina', '$area', $quantidade_orientacoes, '$email', '$status')";
 
+$cadastraProfessorComoUsuario = "insert into usuario (matricula, senha, permissao)
+values ($matricula, '$matricula', 2 )";
+$link->query($cadastraProfessorComoUsuario);
 
 if($link->query($query)){ 
 	$retorno = array('mensagem' => "Cadastrado com Sucesso", 'status' => true);
