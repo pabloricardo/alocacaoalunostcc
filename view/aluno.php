@@ -34,6 +34,16 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
+	<form class="form-horizontal" action="../model/importar-alunos-csv.php" method="post" name="uploadCSV" enctype="multipart/form-data">
+		<div class="input-row">
+			<label class="col-md-4 control-label">Importar Alunos Pelo CSV</label> 
+			<input type="file" name="file" id="file" accept=".csv">
+			<button type="submit" id="submit" name="import" class="btn btn-primary">Importar</button>
+			<br />
+		</div>
+		<div id="labelError"></div>
+	</form>
+
 	<form id="pesquisar-form">
 		<div class="panel panel-default col-md-offset-1 col-md-10">
 			<div class="panel-heading">
