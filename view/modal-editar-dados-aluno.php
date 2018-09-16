@@ -18,7 +18,7 @@
 				<div class="col-sm-2">
 					<div class="form-group no-margin-hr">
 						<label class="control-label">Matrícula</label>
-						<input name="matricula-nova" id="matricula-nova" class="form-control" placeholder="Matrícula">
+						<input name="matricula-nova" id="matricula-nova" class="form-control" placeholder="Matrícula" disabled>
 					</div>
 				</div>
 				<div class="col-sm-4">

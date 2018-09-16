@@ -9,6 +9,13 @@
 	//imprimir a variável
 	echo $senha;
 
+	//Executa a consulta
+	$result = $link->query($sql);
+	//Cria um array da com os dados da consulta
+	$row = $result->fetch_assoc();
+	//Imprime o array da com os dados da consulta
+	print_r ($row);
+
 	//verificar se a variável está vazia
 	if(empty($nome) && empty($cpf))
 	printf("Nome %u e CPF %s.",$nome,$cpf )

@@ -1,5 +1,5 @@
 <?php
-//include_once "conferir-autenticacao.php"; 
+include_once "../model/conferir-autenticacao.php";
 include_once "mensagens.php"; 
 $titulo = "SolicitacaoDeOrientacao";
 include_once "head.php"; 
@@ -41,13 +41,13 @@ include_once "head.php";
 			</div>
 			<div class="panel-body">
 				<div class="row">
-				<?php
+					<?php
 					#chama o arquivo de configuração com o banco
 					require './config.php';
 					require './connection.php';
 					$link = DBConnect();
 					#seleciona os dados da tabela produto
-					$sql = "SELECT nome FROM `professores` Where status = 'Ativo'";
+					$sql = "SELECT nome FROM `professores` Where status = 'Ativo' order by nome";
 					$result = $link->query($sql);
 					?>
 					<div class="col-sm-6">
@@ -62,28 +62,38 @@ include_once "head.php";
 						</div>
 					</div>
 
+					<?php
+					#chama o arquivo de configuração com o banco
+					$link = DBConnect();
+					#seleciona os dados da tabela produto
+					$sqlArea = "SELECT * FROM `area` order by nome_da_area";
+					$result = $link->query($sqlArea);
+					?>
+					<div class="col-sm-5">
+						<div class="form-group no-margin-hr">
+							<label for="sel1">Área</label>
+							<select class="form-control" id="id_area" name="id_area">
+								<option selected value>Selecione</option>
+								<?php  while($row = $result->fetch_assoc()) {?>
+								<option value="<?php echo $row['id_area'] ?>"><?php echo $row['nome_da_area'] ?></option>
+								<?php } ?>
+							</select>
+						</div>
+					</div>
 				</div><!-- row -->
 			</div>
 			<div class="panel-footer text-right">
-				<a class="btn btn-warning" href="professor.php">Incluir</a>
-				<button class="btn btn-default" type="reset" onclick="focusPrimeiroCampo('table-pesquisa-item');">Limpar</button>
+				<button class="btn btn-default" type="reset" onclick="focusPrimeiroCampo('table-pesquisa');">Limpar</button>
 				<button class="btn btn-primary" id="btn-pesquisar" type="submit">Pesquisar</button>
 			</div>
 		</div>
 	</form>
 
-	<script type="text/javascript">
-		function mensgemConfrimacao(){
-			alert("Item Cadastrado Com Sucesso");
-		}
-
-	</script>
-
 	<!-- Pixel Admin's javascripts -->
 	<script src="assets/javascripts/bootstrap.min.js"></script>
 	<script src="assets/javascripts/pixel-admin.min.js"></script>
 
-		<div id="table-pesquisa-item" class="table-info display-none col-md-offset-1 col-md-10 padding-left-right-none">
+		<div id="table-pesquisa" class="table-info display-none col-md-offset-1 col-md-10 padding-left-right-none">
 			<div class="panel">
 				<div class="panel-heading text-center">
 					<span class="panel-title">Resultado da pesquisa</span>
@@ -95,10 +105,9 @@ include_once "head.php";
 								<div class="table-light">
 									<table class="table table-bordered">
 										<thead>
-											<tr>
-												<th>Identificador</th>
+											<tr>			
 												<th>Nome</th>
-												<th>Tipo</th>
+												<th>Área</th>
 												<th>Ações</th>
 											</tr>
 										</thead>
@@ -119,12 +128,12 @@ include_once "head.php";
 					var dados = $('#pesquisar-form').serialize();
 					jQuery.ajax({
 						type: "POST",
-						url: "../model/pesquisa-item.php",
+						url: "../model/solicitacao-de-orientacao.php",
 						data: dados,
 						success: function(data)
 						{
 							$('tbody').html(data);
-							$("#table-pesquisa-item").show();
+							$("#table-pesquisa").show();
 						}
 					});			
 					return false;
@@ -132,121 +141,27 @@ include_once "head.php";
 			});
 		</script>
 
-		<!-- Função ajax para deletar-->
+		<!-- Função ajax para solicitar orientação-->
 		<script>
-			function deletarItem(idItem){
-				var confirmacao = confirm("Confirma a exclusão?");
+			function solicitarOrientacao(matriculaProfessor){
+				var confirmacao = confirm("Confirma a solicitação?");
 			    if (confirmacao == true) {
-			        var dados = idItem;
+			        var dados = matriculaProfessor;
 					jQuery.ajax({
 						type: "POST",
-						url: "../model/deletar-item.php",
-						data: "idItem="+idItem,
+						url: "../model/solicitar-orientacao.php",
+						data: "matriculaProfessor="+matriculaProfessor,
 						success: function(data)
 						{
-							$('#btn-pesquisar').click();
-							alert("Item Removido Com Sucesso");
+							alert(data);
+							// $('#btn-pesquisar').click();
+							// alert("Item Removido Com Sucesso");
 						}
 					});		
 				}else {
 			        alert("Operação Cancelada");
 			    }					
 			};
-		</script>
-
-		<!-- Função ajax para visualizar-->
-		<script>
-			function visualizarItem(idItem){
-				jQuery.ajax({
-					type: "POST",
-					url: "../model/visualizar-item.php",
-					data: "idItem="+idItem,
-					success: function(data)
-						{
-
-							data = JSON.parse(data);	
-							$('#visualizar-idItem').val(data.IdItem);
-							$('#visualizar-nome').val(data.NomeItem);
-							$('#visualizar-dtCadastro').val(data.DataCadastro);
-							$('#visualizar-tipo').val(data.TipoItem);
-							$('#visualizar-tamanho').val(data.Tamanho);
-							$('#visualizar-observacao').val(data.Observacao);
-
-						}
-					});						
-			};
-		</script>
-
-		<!-- Função ajax para editar-->
-		<script>
-			function editarItem(idItem){
-				jQuery.ajax({
-					type: "POST",
-					url: "../model/modal-editar-dados-item.php",
-					data: "idItem="+idItem,
-					success: function(data)
-						{
-
-							data = JSON.parse(data);	
-							$('#editar-idItem').val(data.IdItem);
-							$('#visualizar-nome').val(data.NomeItem);
-							$('#visualizar-dtCadastro').val(data.DataCadastro);
-							$('#visualizar-tipo').val(data.TipoItem);
-							$('#visualizar-tamanho').val(data.Tamanho);
-							$('#visualizar-observacao').val(data.Observacao);
-
-
-						}
-					});						
-			};
-		</script>
-		<!-- Função ajax para doar item-->
-		<script>
-			function doarItem(idItem){
-				jQuery.ajax({
-					type: "POST",
-					url: "../model/modal-efetuar-doacao.php",
-					data: "idItem="+idItem,
-					success: function(data)
-						{
-
-							data = JSON.parse(data);	
-							$('#doar-idItem').val(data.IdItem);
-							$('#doar-nome').val(data.NomeItem);
-							$('#doar-dtCadastro').val(data.DataCadastro);
-							$('#doar-tipo').val(data.TipoItem);
-							$('#doar-tamanho').val(data.Tamanho);
-							$('#doar-observacao').val(data.Observacao);
-
-
-						}
-					});						
-			};
-		</script>
-	<!-- Javascript -->
-	<script>
-		init.push(function () {
-
-			$('#bs-datepicker-inline').datepicker();
-			$(document).ready(function(){
-				$('#dtNascimento').datepicker({
-					format: 'dd/mm/yyyy',
-				});
-
-			});
-
-			$("#telefone").mask("(99) 99999-9999");
-			$("#cpf").mask("99999999999");
-			$("#masked-inputs-examples-ssn").mask("999-99-9999");
-			$("#masked-inputs-examples-product-key").mask("a*-999-a999", {
-				placeholder: " ",
-				completed: function(){
-					alert("You typed the following: " + this.val());
-				}
-			});
-		});
-		window.PixelAdmin.start(init);
-	</script>
-	
+		</script>	
 </body>
 </html>

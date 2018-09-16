@@ -1,5 +1,5 @@
 		<?php
-		include_once "conferir-autenticacao.php"; 
+		include_once "../model/conferir-autenticacao.php"; 
 		include_once "mensagens.php"; 
 		$titulo = "Relatório Item";
 		include_once "head.php"; 

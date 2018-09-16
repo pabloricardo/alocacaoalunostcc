@@ -18,7 +18,7 @@
 				<div class="col-sm-2">
 					<div class="form-group no-margin-hr">
 						<label class="control-label">Matrícula</label>
-						<input name="matricula-nova" id="matricula-nova" class="form-control" placeholder="Matrícula">
+						<input name="matricula-nova" id="matricula-nova" class="form-control" placeholder="Matrícula" disabled>
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -51,7 +51,13 @@
 							<option>Inativo</option>
 						</select>
 					</div>
-			</div><!-- row -->			
+			</div><!-- row -->
+			<div class="row">
+				<div class="col-sm-12">
+					<label class="control-label" for="sel1">Descrição</label>
+					<textarea class="form-control" name="editar-descricao" id="editar-descricao" cols="10" rows="10"></textarea>
+				</div>		
+			</div><!-- row -->				
 				<input type="text" id="matricula-antiga"  name="matricula-antiga" hidden>
 			</div>
         </div>

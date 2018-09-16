@@ -1,11 +1,11 @@
-		<?php
-		//include_once "conferir-autenticacao.php"; 
-		include_once "mensagens.php"; 
-		$titulo = $professores;
-		include_once "head.php"; 
-		include_once "modal-visualizar-dados-professor.php";
-		include_once "modal-editar-dados-professor.php";
-		?>
+<?php
+//include_once "../model/conferir-autenticacao.php"; 
+include_once "mensagens.php"; 
+$titulo = $professores;
+include_once "head.php"; 
+include_once "modal-visualizar-dados-professor.php";
+include_once "modal-editar-dados-professor.php";
+?>
 
 <body class="theme-default main-menu-animated">
 
@@ -132,28 +132,6 @@
 		});
 	</script>
 
-	<!-- Função ajax para deletar-->
-	<!-- <script>
-		function deletarUsuario(cpf){
-			var confirmacao = confirm("Confirma a exclusão?");
-			if (confirmacao == true) {
-				var dados = cpf;
-				jQuery.ajax({
-					type: "POST",
-					url: "../model/deletar-usuario.php",
-					data: "cpf="+cpf,
-					success: function(data)
-					{
-						$('#btn-pesquisar').click();
-						alert("Usuário Removido Com Sucesso");
-					}
-				});		
-			}else {
-				alert("Operação Cancelada");
-			}					
-		};
-	</script> -->
-
 	<!-- Função ajax para visualizar-->
 	<script>
 		function visualizarProfessor(matricula){
@@ -167,6 +145,7 @@
 						$('#visualizar-nome').val(data.nome);
 						$('#visualizar-email').val(data.email);
 						$('#visualizar-matricula').val(data.matricula);
+						$('#visualizar-descricao').val(data.descricao);
 					}
 				});						
 		};
@@ -187,6 +166,7 @@
 						$('#editar-disciplina').val(data.disciplina);
 						$('#editar-quantidade_orientacoes').val(data.quantidade_orientacoes);
 						$('#editar-status').val(data.status);
+						$('#editar-descricao').val(data.descricao);
 						$('#matricula-nova').val(data.matricula);
 						$('#matricula-antiga').val(data.matricula);
 					}

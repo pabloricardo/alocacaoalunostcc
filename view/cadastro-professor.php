@@ -1,5 +1,5 @@
 <?php
-//include_once "conferir-autenticacao.php"; 
+//include_once "../model/conferir-autenticacao.php"; 
 include_once "mensagens.php"; 
 $titulo = $cadastrarProfessores;
 include_once "head.php"; 
@@ -68,28 +68,32 @@ include_once "head.php";
 							<option>Ambas</option>
 						</select>
 					</div>
-					<div class="row">
-						<div class="col-sm-2">
-							<div class="form-group no-margin-hr">
+					<div class="col-sm-2">
+						<div class="form-group no-margin-hr">
 							<label class="control-label">Área(s)</label>
 							<input type="text" name="area" class="form-control" placeholder="Área(s)">
 						</div>
 					</div>
-						<div class="col-sm-2">
-							<div class="form-group no-margin-hr">
-								<label class="control-label">Quantidade de orientações</label>
-								<input id="quantidade_orientacoes" name="quantidade_orientacoes" class="form-control" placeholder="Quantidade de orientações">
-							</div>
+					<div class="col-sm-2">
+						<div class="form-group no-margin-hr">
+							<label class="control-label">Quantidade de orientações</label>
+							<input id="quantidade_orientacoes" name="quantidade_orientacoes" class="form-control" placeholder="Quantidade de orientações">
 						</div>
-						<div class="col-sm-2">
+					</div>
+					<div class="col-sm-2">
 						<label for="sel1">Status</label>
 						<select class="form-control" id="status" name="status">
 							<option selected>Ativo</option>
 							<option>Inativo</option>
 						</select>
-					</div>
+					</div>							
+				</div><!-- row -->
+				<div class="row">
+					<div class="col-sm-12">
+						<label class="control-label" for="sel1">Descrição</label>
+						<textarea class="form-control" name="descricao" id="descricao" cols="10" rows="10"></textarea>
 					</div>		
-				</div><!-- row -->				
+				</div><!-- row -->		
 			</div>
 			<div class="panel-footer text-right">
 				<a class="btn btn-default" href="professores.php">Cancelar</a>

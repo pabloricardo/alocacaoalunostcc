@@ -1,5 +1,5 @@
 <?php
-include_once "conferir-autenticacao.php"; 
+include_once "../model/conferir-autenticacao.php"; 
 include_once "mensagens.php"; 
 $titulo = $cadastrarSenha;
 include_once "head.php"; 
@@ -32,8 +32,8 @@ include_once "head.php";
 
 
 	<div class="text-center mensagem-inserir display-none alert"></div>
-    <div id="btn-logar" class="display-none text-center panel panel-default col-md-12">
-		<a class="btn btn-primary" href="index.php">Logar</a>
+    <div id="btn-logar" class="display-none text-center panel-default col-md-12">
+		<a class="btn btn-primary btn-lg" href="index.php">Logar</a>
 	</div>
 
 	<form id="cadastro">

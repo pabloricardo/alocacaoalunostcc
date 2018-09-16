@@ -1,5 +1,5 @@
 		<?php
-		//include_once "conferir-autenticacao.php"; 
+		//include_once "../model/conferir-autenticacao.php"; 
 		include_once "mensagens.php"; 
 		$titulo = $alunos;
 		include_once "head.php"; 
@@ -35,9 +35,17 @@
 	</nav>
 
 	<form class="form-horizontal" action="../model/importar-alunos-csv.php" method="post" name="uploadCSV" enctype="multipart/form-data">
-		<div class="input-row">
-			<label class="col-md-4 control-label">Importar Alunos Pelo CSV</label> 
-			<input type="file" name="file" id="file" accept=".csv">
+		<div id="import">
+			<label class="col-md-offset-3 col-md-2 control-label">Importar Alunos Pelo CSV</label> 
+			<input type="file" name="file" id="file" accept=".csv" class="btn btn-default">
+			<div class="col-sm-2">
+				<label for="sel1">Disciplina</label>
+				<select class="form-control" id="disciplina" name="disciplina">
+					<option value="" selected>Selecione</option>
+					<option >TCC01</option>
+					<option>TCC02</option>
+				</select>
+			</div>
 			<button type="submit" id="submit" name="import" class="btn btn-primary">Importar</button>
 			<br />
 		</div>

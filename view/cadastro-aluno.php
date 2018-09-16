@@ -1,5 +1,5 @@
 <?php
-//include_once "conferir-autenticacao.php"; 
+//include_once "../model/conferir-autenticacao.php"; 
 include_once "mensagens.php"; 
 $titulo = $cadastrarAlunos;
 include_once "head.php"; 
@@ -94,7 +94,7 @@ include_once "head.php";
 			rules: {
 				nome: { required: true },
 				matricula: { required: true, minlength: 6, maxlength:6, number: true },
-				email: { required: true, email:true },
+				email: { email:true },
 			},
 			submitHandler: function(form){
 				var dados = $(form).serialize();
