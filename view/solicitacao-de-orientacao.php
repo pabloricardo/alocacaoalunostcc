@@ -143,25 +143,25 @@ include_once "head.php";
 
 		<!-- Função ajax para solicitar orientação-->
 		<script>
-			function solicitarOrientacao(matriculaProfessor){
-				var confirmacao = confirm("Confirma a solicitação?");
-			    if (confirmacao == true) {
-			        var dados = matriculaProfessor;
-					jQuery.ajax({
-						type: "POST",
-						url: "../model/solicitar-orientacao.php",
-						data: "matriculaProfessor="+matriculaProfessor,
-						success: function(data)
-						{
-							alert(data);
-							// $('#btn-pesquisar').click();
-							// alert("Item Removido Com Sucesso");
-						}
-					});		
-				}else {
-			        alert("Operação Cancelada");
-			    }					
-			};
+
+		function solicitarOrientacao(matricula, area){
+			var confirmacao = confirm("Confirma a solicitação?");
+			if (confirmacao == true) {
+				var mydata = { matricula: matricula , area: area};
+				jQuery.ajax({
+					type: "POST",
+					url: "../model/solicitar-orientacao.php",
+					data: mydata,
+					success: function(data)
+					{					
+						data = JSON.parse(data);
+						alert(data.mensagem);
+					}
+				});		
+			}else {
+				alert("Operação Cancelada");
+			}					
+		};
 		</script>	
 </body>
 </html>

@@ -3,24 +3,24 @@
 	require 'config.php';
     require 'connection.php';
     
-    $matricula = $_SESSION['matricula'];
-    $matriculaProfessor = $_POST['matriculaProfessor'];
+    $matriculaAluno = $_SESSION['matricula'];
+    $matriculaProfessor = $_POST['matricula'];
+    $areaEscolhida = $_POST['area'];
 
     $link = DBConnect();
 
-    $query = "insert into alunos (nome, matricula, email ) 
-    values ('$nome' , $matricula, '$email')";
+    // echo ($matriculaProfessor);
+    // $retorno = array('matriculaProfessor' => $matriculaProfessor, 'matricula' => $matricula, 'areaEscolhida' => $areaEscolhida);
+    // echo json_encode($retorno);
     
-    $cadastraAlunoComoUsuario = "insert into usuario (matricula, senha, permissao)
-    values ($matricula, '$matricula', 1 )";
-    
-    $link->query($cadastraAlunoComoUsuario);
-    
+
+    $query = "insert into solicitacao_de_orientacao (matricula_professor, matricula_aluno, nome_da_area, status) 
+    values ($matriculaProfessor , $matriculaAluno, '$areaEscolhida', 'Aguardando')"; 
     
     if($link->query($query)){ 
-        $retorno = array('mensagem' => "Cadastrado com Sucesso", 'status' => true);
+        $retorno = array('mensagem' => "Solicitação enviada");
     } else{ 
-        $retorno = array('mensagem' => "Matrícula Já Cadastrada");
+        $retorno = array('mensagem' => "Não foi possível enviar a solicitação");
     } 
         echo json_encode($retorno);
         mysqli_close($link);
