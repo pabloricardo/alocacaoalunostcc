@@ -1,7 +1,9 @@
 <?php
 include_once "../model/conferir-autenticacao.php";
 include_once "mensagens.php"; 
+$titulo = $menu;
 include_once "head.php"; 
+
 ?>
 
 
@@ -38,7 +40,7 @@ include_once "head.php";
 				<?php }	?>
 				<?php if($_SESSION['permissao'] == 2 || $_SESSION['permissao'] == 3){?>	
 				<div class="form-actions">
-					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Aprovar Solicitação de orientacao</a>		
+					<a class="btn btn-primary btn-block btn-lg" href="aprovacao-de-orientacao.php">Aprovar Solicitação de orientacao</a>		
 				</div> <!-- / .form-actions -->
 				<?php }	?>
 				<div class="form-actions">

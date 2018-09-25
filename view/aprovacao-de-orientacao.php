@@ -1,7 +1,7 @@
 <?php
 include_once "../model/conferir-autenticacao.php";
 include_once "mensagens.php"; 
-$titulo = $solicitacaoDeOrientacao;
+$titulo = $aprovarSolicitacaoDeOrientacao;
 include_once "head.php"; 
 ?>
 
@@ -24,7 +24,7 @@ include_once "head.php";
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Solicitação de Orientação <span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="#">Aprovar Solicitação de Orientação<span class="sr-only">(current)</span></a></li>
 					<li><a href="pagina-inicial.php">Página Inicial</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
@@ -33,70 +33,14 @@ include_once "head.php";
 	</nav>
 	
 	<!--action="../model/pesquisa-item.php" method="POST"-->
-	<form id="pesquisar-form">
-				<div class="panel panel-default col-md-offset-1 col-md-10">
-
-			<div class="panel-heading">
-				<h1 class="panel-title text-center">Solicitação de Orientação</h1>
-			</div>
-			<div class="panel-body">
-				<div class="row">
-					<?php
-					#chama o arquivo de configuração com o banco
-					require './config.php';
-					require './connection.php';
-					$link = DBConnect();
-					#seleciona os dados da tabela produto
-					$sql = "SELECT nome FROM `professores` Where status = 'Ativo' order by nome";
-					$result = $link->query($sql);
-					?>
-					<div class="col-sm-6">
-						<div class="form-group no-margin-hr">
-							<label for="sel1">Nome</label>
-							<select class="form-control" id="nome" name="nome">
-								<option selected value>Selecione</option>
-								<?php  while($row = $result->fetch_assoc()) {?>
-								<option value="<?php echo $row['nome'] ?>"><?php echo $row['nome'] ?></option>
-								<?php } ?>
-							</select>
-						</div>
-					</div>
-
-					<?php
-					#chama o arquivo de configuração com o banco
-					$link = DBConnect();
-					#seleciona os dados da tabela produto
-					$sqlArea = "SELECT * FROM `area` order by nome_da_area";
-					$result = $link->query($sqlArea);
-					?>
-					<div class="col-sm-5">
-						<div class="form-group no-margin-hr">
-							<label for="sel1">Área</label>
-							<select class="form-control" id="id_area" name="id_area">
-								<option selected value>Selecione</option>
-								<?php  while($row = $result->fetch_assoc()) {?>
-								<option value="<?php echo $row['id_area'] ?>"><?php echo $row['nome_da_area'] ?></option>
-								<?php } ?>
-							</select>
-						</div>
-					</div>
-				</div><!-- row -->
-			</div>
-			<div class="panel-footer text-right">
-				<button class="btn btn-default" type="reset" onclick="focusPrimeiroCampo('table-pesquisa');">Limpar</button>
-				<button class="btn btn-primary" id="btn-pesquisar" type="submit">Pesquisar</button>
-			</div>
-		</div>
-	</form>
-
 	<!-- Pixel Admin's javascripts -->
 	<script src="assets/javascripts/bootstrap.min.js"></script>
 	<script src="assets/javascripts/pixel-admin.min.js"></script>
 
-		<div id="table-pesquisa" class="table-info display-none col-md-offset-1 col-md-10 padding-left-right-none">
+		<div id="table-pesquisa" class="table-info col-md-offset-1 col-md-10 padding-left-right-none">
 			<div class="panel">
 				<div class="panel-heading text-center">
-					<span class="panel-title">Resultado da pesquisa</span>
+					<span class="panel-title">Solicitações de Orientação</span>
 				</div>
 					<div class="panel-body">
 						<div class="row">
@@ -106,12 +50,62 @@ include_once "head.php";
 									<table class="table table-bordered">
 										<thead>
 											<tr>			
-												<th>Nome</th>
-												<th>Área</th>
+												<th>Nome do Aluno</th>
+												<th>Área que o aluno solicitou orientação</th>
 												<th>Ações</th>
 											</tr>
 										</thead>
 										<tbody>
+										<?php
+											require '../model/config.php';
+											require '../model/connection.php';
+											$matriculaProfessor = $_SESSION['matricula'];
+											$link = DBConnect();
+
+													
+											//Verifica se o campo foi preenchido para montar a query dinamica
+											// $where = array();
+											// if( $area ){ $where[] = "nome_da_area LIKE '{$area}%'"; }
+											//Monta a query
+											$sql = "SELECT * FROM solicitacao_de_orientacao so 
+											JOIN professores p on so.matricula_professor =  p.matricula 
+											JOIN alunos al on so.matricula_aluno = al.matricula											
+											WHERE so.matricula_professor = $matriculaProfessor";
+											// if( sizeof( $where ) )
+											// $sql .= ' WHERE '.implode( ' AND ',$where );
+											//echo $sql; imrpime a query montada
+											//Executa query
+											$result = $link->query($sql);
+											// $num_rows = mysqli_num_rows($result);
+											// print_r ($num_rows);
+											// print_r ($sql);
+											
+
+											//Veririca se retornou alguma linha
+											if ($result->num_rows > 0) {
+											// Pega cada linha retornada e executa os comandos									
+											
+											while($row = $result->fetch_assoc()) {
+												
+											?>
+										 			<tr>
+										 				<td><?php echo $row['nome'] ?></td>
+													<?php	 if($row['nome_da_area'] != '1'){?>
+														 <td><?php echo $row['nome_da_area'] ?></td>
+													<?php } else { ?><td><?php echo ("Aluno deseja sua orientação sem importar a área") ?></td><?php } ?>
+										 				<td class="acoes-pesquisa-usuario">
+														 <i class="btn btn-default btn-xs fa fa-check" title="Aprovar" aria-hidden="true" onclick="aceitarSolicitacao(<?php echo $row['matricula'] ?>)"></i>
+														 <i class="btn btn-danger btn-xs fa fa-times" title="Rejeitar" aria-hidden="true" onclick="rejeitarSolicitacao(<?php echo $row['matricula'] ?>)"></i>
+										 				</td>
+										 			</tr>
+										 	<?php
+										 	}     
+										 }else{
+										 	echo "<td> Não há Solicitações </td> <td> Não há Solicitações </td> <td> Não há Solicitações </td>";
+										 }
+
+										mysqli_close($link);
+										?>
 										</tbody>
 									</table>
 								</div>

@@ -19,6 +19,7 @@
 	$where = array();
 	if( $id_area ){ $where[] = "a.id_area = {$id_area}"; }
 	if( $nome ){ $where[] = "p.nome = '{$nome}'"; }
+	$where[] = "p.status = 'Ativo'";
 	$where[] = "(p.disciplina = 'Ambas'";
 	
 	//Monta a query dinamica
