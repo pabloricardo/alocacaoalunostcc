@@ -1,9 +1,13 @@
 <?php
 
-require '../view/config.php';
-require '../view/connection.php';
+require './config.php';
+require './connection.php';
+
+$link = DBConnect();
 
 $nome = $_POST['nome'];
+
+
 $matricula = $_POST['matricula'];
 $email = $_POST['email'];
 $disciplina = $_POST['disciplina'];
@@ -14,7 +18,14 @@ $quantidade_orientacoes = $_POST['quantidade_orientacoes'];
 $status = $_POST['status'];
 $descricao = $_POST['descricao'];
 
-$link = DBConnect();
+$areas = $_POST['my-select'];
+foreach ($areas as $value) {
+	$query = "insert into area_professores (id_area, matricula) 
+values ($value , $matricula)";
+$link->query($query);
+}
+
+
 
 $query = "insert into professores (nome, matricula, disciplina, quantidade_orientacoes , email, status, descricao) 
 values ('$nome' , $matricula, '$disciplina', $quantidade_orientacoes, '$email', '$status', '$descricao')";

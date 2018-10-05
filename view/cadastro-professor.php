@@ -1,5 +1,5 @@
 <?php
-//include_once "../model/conferir-autenticacao.php"; 
+include_once "../model/conferir-autenticacao.php"; 
 include_once "mensagens.php"; 
 $titulo = $cadastrarProfessores;
 include_once "head.php"; 
@@ -68,11 +68,22 @@ include_once "head.php";
 							<option>Ambas</option>
 						</select>
 					</div>
-					<div class="col-sm-2">
-						<div class="form-group no-margin-hr">
-							<label class="control-label">Área(s)</label>
-							<input type="text" name="area" class="form-control" placeholder="Área(s)">
-						</div>
+					<div class="col-sm-4">
+					<?php
+					#chama o arquivo de configuração com o banco
+					require './config.php';
+					require './connection.php';
+					#chama o arquivo de configuração com o banco
+					$link = DBConnect();
+					#seleciona os dados da tabela produto
+					$sqlArea = "SELECT * FROM `area` order by nome_da_area";
+					$result = $link->query($sqlArea);
+					?>
+					<select class="form-control" multiple="multiple" id="my-select" name="my-select[]">		
+								<?php  while($row = $result->fetch_assoc()) {?>
+								<option value="<?php echo $row['id_area'] ?>"><?php echo $row['nome_da_area'] ?></option>
+								<?php } ?>
+					</select>
 					</div>
 					<div class="col-sm-2">
 						<div class="form-group no-margin-hr">
@@ -107,6 +118,10 @@ include_once "head.php";
 <script src="assets/javascripts/bootstrap.min.js"></script>
 <script src="assets/javascripts/pixel-admin.min.js"></script>
 <script>
+$('#my-select').multiSelect({
+  selectableHeader: "<div class='custom-header'>Areas existente</div>",
+  selectionHeader: "<div class='custom-header'>Areas selecionadas</div>"
+})
 	init.push(function () {
 
 		$('#bs-datepicker-inline').datepicker();
@@ -148,6 +163,7 @@ include_once "head.php";
 							$("div.mensagem-inserir-usuario").show();
 							$("div.mensagem-inserir-usuario").addClass("alert-success");
 	        				$("div.mensagem-inserir-usuario").html(data.mensagem);
+							$('#my-select').multiSelect('deselect_all');
 	        				$('#cadastro-professor').each (function(){this.reset();});
 						}
 						else{

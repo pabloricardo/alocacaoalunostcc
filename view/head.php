@@ -15,10 +15,12 @@
 	<link href="assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
 	<link href="assets/stylesheets/customizacao.css" rel="stylesheet" type="text/css">
+	<link href="assets/stylesheets/multi-select.css" rel="stylesheet" type="text/css">
 	<script src="assets/javascripts/jquery.min.js"></script>
 	<script src="assets/javascripts/bootstrap.min.js"></script>
 	<script src="assets/javascripts/utilidades.js"></script>
 	<script src="assets/javascripts/jquery.table2excel.js"></script>
 	<script src="assets/javascripts/jquery.validate.min.js"></script>
 	<script src="assets/javascripts/pixel-admin.min.js"></script>
+	<script src="assets/javascripts/jquery.multi-select.js"></script>
 </head>

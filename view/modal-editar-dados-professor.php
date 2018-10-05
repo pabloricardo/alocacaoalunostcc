@@ -38,6 +38,24 @@
 							<option>Ambas</option>
 						</select>
 					</div>
+					<div class="col-sm-6">
+					<?php
+					#seleciona os dados da tabela produto
+					$sqlArea = "SELECT * FROM `area` order by nome_da_area";
+					$result = $link->query($sqlArea);
+					?>
+					<select class="form-control" multiple="multiple" id="my-select" name="my-select[]">		
+								<?php  while($row = $result->fetch_assoc()) {
+									
+									// $sqlAreaSelecionada = "SELECT * FROM area A join area_prefessores AP 
+									// on $row['id_area'] = AP.id_area order by nome_da_area";
+									// <?php echo ('selected') ?>
+									?>
+								
+								<option value="<?php echo $row['id_area'] ?>" ><?php echo $row['nome_da_area'] ?></option>
+								<?php } ?>
+					</select>
+					</div>
 						<div class="col-sm-3">
 							<div class="form-group no-margin-hr">
 								<label class="control-label">Quantidade de orientações</label>

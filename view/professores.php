@@ -1,10 +1,9 @@
 <?php
-//include_once "../model/conferir-autenticacao.php"; 
+include_once "../model/conferir-autenticacao.php"; 
 include_once "mensagens.php"; 
 $titulo = $professores;
 include_once "head.php"; 
 include_once "modal-visualizar-dados-professor.php";
-include_once "modal-editar-dados-professor.php";
 ?>
 
 <body class="theme-default main-menu-animated">
@@ -46,6 +45,7 @@ include_once "modal-editar-dados-professor.php";
 					require './config.php';
 					require './connection.php';
 					$link = DBConnect();
+					include_once "modal-editar-dados-professor.php";
 					#seleciona os dados da tabela produto
 					$sql = "SELECT nome FROM `professores`";
 					$result = $link->query($sql);
@@ -177,19 +177,10 @@ include_once "modal-editar-dados-professor.php";
 
 	<!-- Javascript -->
 	<script>
-		init.push(function () {
-
-			$('#bs-datepicker-inline').datepicker();
-				$(document).ready(function(){
-					$('#semestre-letivo').datepicker({
-						format: 'mm/yyyy',
-						minDate: new Date(1999, 10, 10),
-
-					});
-
-				});
-		});
-		window.PixelAdmin.start(init);
+		$('#my-select').multiSelect({
+  selectableHeader: "<div class='custom-header'>Areas existente</div>",
+  selectionHeader: "<div class='custom-header'>Areas selecionadas</div>"
+})
 	</script>
 </body>
 </html>
