@@ -1,5 +1,8 @@
 <?php  
 
+	//Mostra informações sobre a variável
+	var_dump($verificaStatus);
+
 	//receber valor do post
 	$senha = $_POST['senha'];
 

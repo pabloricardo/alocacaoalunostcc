@@ -157,8 +157,9 @@ $('#my-select').multiSelect({
 					data: dados,
 					success: function(data)
 					{
+						alert(data);
 						data = JSON.parse(data);
-						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");
+						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");						
 						if(data.status == true){
 							$("div.mensagem-inserir-usuario").show();
 							$("div.mensagem-inserir-usuario").addClass("alert-success");

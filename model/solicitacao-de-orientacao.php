@@ -20,7 +20,9 @@
 	if( $id_area ){ $where[] = "a.id_area = {$id_area}"; }
 	if( $nome ){ $where[] = "p.nome = '{$nome}'"; }
 	$where[] = "p.status = 'Ativo'";
+	$where[] = "p.quantidade_orientacoes > 0";
 	$where[] = "(p.disciplina = 'Ambas'";
+
 	
 	//Monta a query dinamica
 
@@ -65,6 +67,7 @@
 
 		//echo ($sql); imrpime a query montada
 	//Executa query
+	var_dump($sql);
 	$result = $link->query($sql);
 	if ($result->num_rows > 0) {
 		// Pega cada linha retornada e executa os comandos

@@ -31,7 +31,17 @@ include_once "head.php";
 
 		</div><!-- /.container-fluid -->
 	</nav>
-	
+	<?php
+					#chama o arquivo de configuração com o banco
+					require './config.php';
+					require './connection.php';
+					$matriculaAluno = $_SESSION['matricula'];
+					$link = DBConnect();
+					$verificaStatus = "SELECT * FROM `solicitacao_de_orientacao` Where matricula_aluno = $matriculaAluno and status = 'Aprovado' ";
+					$result = $link->query($verificaStatus);
+					$retornoNoArray = $result->fetch_assoc();
+					if ($result->num_rows == 0) {
+					?>
 	<!--action="../model/pesquisa-item.php" method="POST"-->
 	<form id="pesquisar-form">
 				<div class="panel panel-default col-md-offset-1 col-md-10">
@@ -42,12 +52,7 @@ include_once "head.php";
 			<div class="panel-body">
 				<div class="row">
 					<?php
-					#chama o arquivo de configuração com o banco
-					require './config.php';
-					require './connection.php';
-					$link = DBConnect();
-					#seleciona os dados da tabela produto
-					$sql = "SELECT nome FROM `professores` Where status = 'Ativo' order by nome";
+					$sql = "SELECT nome FROM `professores` Where status = 'Ativo' and quantidade_orientacoes > 0 order by nome";
 					$result = $link->query($sql);
 					?>
 					<div class="col-sm-6">
@@ -88,6 +93,8 @@ include_once "head.php";
 			</div>
 		</div>
 	</form>
+
+	<?php }else echo('<h1 class="col-md-offset-2 col-md-10">Sua solicitação de orientação já foi aprovada por um professor.</h1>') ?>
 
 	<!-- Pixel Admin's javascripts -->
 	<script src="assets/javascripts/bootstrap.min.js"></script>

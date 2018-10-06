@@ -18,12 +18,14 @@ $quantidade_orientacoes = $_POST['quantidade_orientacoes'];
 $status = $_POST['status'];
 $descricao = $_POST['descricao'];
 
-$areas = $_POST['my-select'];
-foreach ($areas as $value) {
-	$query = "insert into area_professores (id_area, matricula) 
-values ($value , $matricula)";
-$link->query($query);
-}
+if (isset($_POST['my-select'])) { 
+		$areas = $_POST['my-select'];
+		foreach ($areas as $value) {
+			$query = "insert into area_professores (id_area, matricula) 
+		values ($value , $matricula)";
+		$link->query($query);
+		}
+	} 
 
 
 
