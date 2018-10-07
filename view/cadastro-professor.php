@@ -157,8 +157,7 @@ $('#my-select').multiSelect({
 					data: dados,
 					success: function(data)
 					{
-						alert(data);
-						data = JSON.parse(data);
+						data = JSON.parse(data);						
 						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");						
 						if(data.status == true){
 							$("div.mensagem-inserir-usuario").show();
@@ -172,6 +171,7 @@ $('#my-select').multiSelect({
 							$("div.mensagem-inserir-usuario").addClass("alert-danger");
 	        				$("div.mensagem-inserir-usuario").html(data.mensagem);		
 						}
+						setTimeout(function(){ $("div.mensagem-inserir-usuario").hide();}, 3000);
 					}
 				});			
 				return false;

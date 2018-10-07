@@ -7,8 +7,6 @@
 
 	$sql = "SELECT * FROM `professores` WHERE matricula = $matricula ";
 
-
-
 	$result = $link->query($sql);
 
 	$row = $result->fetch_assoc();

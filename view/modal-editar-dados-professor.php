@@ -18,7 +18,7 @@
 				<div class="col-sm-2">
 					<div class="form-group no-margin-hr">
 						<label class="control-label">Matrícula</label>
-						<input name="matricula-nova" id="matricula-nova" class="form-control" placeholder="Matrícula" disabled>
+						<input name="editar-matricula" id="editar-matricula" class="form-control" placeholder="Matrícula">
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -37,24 +37,6 @@
 							<option>TCC02</option>
 							<option>Ambas</option>
 						</select>
-					</div>
-					<div class="col-sm-6">
-					<?php
-					#seleciona os dados da tabela produto
-					$sqlArea = "SELECT * FROM `area` order by nome_da_area";
-					$result = $link->query($sqlArea);
-					?>
-					<select class="form-control" multiple="multiple" id="my-select" name="my-select[]">		
-								<?php  while($row = $result->fetch_assoc()) {
-									
-									// $sqlAreaSelecionada = "SELECT * FROM area A join area_prefessores AP 
-									// on $row['id_area'] = AP.id_area order by nome_da_area";
-									// <?php echo ('selected') ?>
-									?>
-								
-								<option value="<?php echo $row['id_area'] ?>" ><?php echo $row['nome_da_area'] ?></option>
-								<?php } ?>
-					</select>
 					</div>
 						<div class="col-sm-3">
 							<div class="form-group no-margin-hr">
@@ -76,7 +58,6 @@
 					<textarea class="form-control" name="editar-descricao" id="editar-descricao" cols="10" rows="10"></textarea>
 				</div>		
 			</div><!-- row -->				
-				<input type="text" id="matricula-antiga"  name="matricula-antiga" hidden>
 			</div>
         </div>
         <div class="modal-footer">
@@ -97,6 +78,7 @@
 					data: dados,
 					success: function(data)
 					{
+						alert(data);
 						$('#btn-pesquisar').click();
 						alert("Dados alterados com sucesso");
 					}

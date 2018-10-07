@@ -167,20 +167,11 @@ include_once "modal-visualizar-dados-professor.php";
 						$('#editar-quantidade_orientacoes').val(data.quantidade_orientacoes);
 						$('#editar-status').val(data.status);
 						$('#editar-descricao').val(data.descricao);
-						$('#matricula-nova').val(data.matricula);
-						$('#matricula-antiga').val(data.matricula);
+						$('#editar-matricula').val(data.matricula);
 					}
 				});						
 		};
 	</script>
 
-
-	<!-- Javascript -->
-	<script>
-		$('#my-select').multiSelect({
-  selectableHeader: "<div class='custom-header'>Areas existente</div>",
-  selectionHeader: "<div class='custom-header'>Areas selecionadas</div>"
-})
-	</script>
 </body>
 </html>

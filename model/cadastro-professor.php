@@ -18,29 +18,32 @@ $quantidade_orientacoes = $_POST['quantidade_orientacoes'];
 $status = $_POST['status'];
 $descricao = $_POST['descricao'];
 
-if (isset($_POST['my-select'])) { 
-		$areas = $_POST['my-select'];
-		foreach ($areas as $value) {
-			$query = "insert into area_professores (id_area, matricula) 
-		values ($value , $matricula)";
-		$link->query($query);
-		}
-	} 
+
 
 
 
 $query = "insert into professores (nome, matricula, disciplina, quantidade_orientacoes , email, status, descricao) 
 values ('$nome' , $matricula, '$disciplina', $quantidade_orientacoes, '$email', '$status', '$descricao')";
 
-$cadastraProfessorComoUsuario = "insert into usuario (matricula, senha, permissao)
-values ($matricula, '$matricula', 2 )";
-$link->query($cadastraProfessorComoUsuario);
-
 if($link->query($query)){ 
+
+	if (isset($_POST['my-select'])) { 
+		$areas = $_POST['my-select'];
+		foreach ($areas as $value) {
+			$query = "insert into area_professores (id_area, matricula) 
+		values ($value , $matricula)";
+		$link->query($query);
+		}
+	}
+	
+	$cadastraProfessorComoUsuario = "insert into usuario (matricula, senha, permissao)
+	values ($matricula, '$matricula', 2 )";
+	$link->query($cadastraProfessorComoUsuario);
+
 	$retorno = array('mensagem' => "Cadastrado com Sucesso", 'status' => true);
+	
 } else{ 
-	echo($query);
-	$retorno = array('mensagem' => "Matrícula Já Cadastrada");
+	$retorno = array('mensagem' => "Matrícula Já Cadastrada",'status' => false);
 } 
     echo json_encode($retorno);
 	mysqli_close($link);

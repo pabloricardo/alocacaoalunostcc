@@ -103,6 +103,7 @@ include_once "head.php";
 							$("div.mensagem-inserir").addClass("alert-danger");
 	        				$("div.mensagem-inserir").html(data.mensagem);		
 						}
+						setTimeout(function(){ $("div.mensagem-inserir").hide();}, 3000);
 					}
 				});			
 				return false;

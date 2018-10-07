@@ -1,0 +1,6 @@
+Falta implementar
+*Multi-select em editar professor.(Mostrar as áreas já selecionadas, deletar todas desse professor e cadastrar com as novas selecionadas)
+*Importar alunos com AJAX e validações.(Já está funcionando apenas implementar com ajax para exibir mensagem se possível validar utf8)
+*Relatórios.(Excel igual do SGA)
+*Validação da quantidade de horas na tela de aprovar solicitação de orientação (Quando professor zerar as horas que pode orientar, não deixar aprovar mais orientaçao e mostrar mensagem informando que já atingiu as horas permitidas).
+*Depois que professor aceitar solicitação sumir com as outras solicitações desse aluno.(Deletar no banco as outras solicitações do aluno e setar a que foi aprovada com status 'Aprovado')
