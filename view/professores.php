@@ -4,6 +4,7 @@ include_once "mensagens.php";
 $titulo = $professores;
 include_once "head.php"; 
 include_once "modal-visualizar-dados-professor.php";
+include_once "modal-editar-dados-professor.php";
 ?>
 
 <body class="theme-default main-menu-animated">
@@ -45,7 +46,6 @@ include_once "modal-visualizar-dados-professor.php";
 					require './config.php';
 					require './connection.php';
 					$link = DBConnect();
-					include_once "modal-editar-dados-professor.php";
 					#seleciona os dados da tabela produto
 					$sql = "SELECT nome FROM `professores`";
 					$result = $link->query($sql);
