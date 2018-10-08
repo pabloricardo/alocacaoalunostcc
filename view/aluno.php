@@ -193,22 +193,5 @@
 		};
 	</script>
 
-
-	<!-- Javascript -->
-	<script>
-		init.push(function () {
-
-			$('#bs-datepicker-inline').datepicker();
-				$(document).ready(function(){
-					$('#semestre-letivo').datepicker({
-						format: 'mm/yyyy',
-						minDate: new Date(1999, 10, 10),
-
-					});
-
-				});
-		});
-		window.PixelAdmin.start(init);
-	</script>
 </body>
 </html>

@@ -5,7 +5,7 @@ $link = DBConnect();
 
 $disciplina = $_POST['disciplina'];
 
-if(isset($_POST["import"])){
+if(isset($_POST["import"]) && $disciplina){
     $filename=$_FILES["file"]["tmp_name"];	
 
      if($_FILES["file"]["size"] > 0)
@@ -25,12 +25,14 @@ if(isset($_POST["import"])){
                 $cadastraAlunoComoUsuario = "INSERT into usuario (matricula, senha, permissao)
                 values ('".$getData[0]."', '". $getData[0] ."', 1 )";
                 $link->query($cadastraAlunoComoUsuario);
-                print_r($sql);
+                // print_r($sql);
             }     
          }
         
          fclose($file);	
      }
-}	 
-mysqli_close($link);
+     mysqli_close($link);
+     header('location:../view/sucesso.php');
+}
+else{ header('location:../view/aluno.php'); }
 ?>

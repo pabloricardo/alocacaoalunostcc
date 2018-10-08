@@ -71,6 +71,7 @@ include_once "head.php";
 											JOIN professores p on so.matricula_professor =  p.matricula 
 											JOIN alunos al on so.matricula_aluno = al.matricula											
 											WHERE so.matricula_professor = $matriculaProfessor";
+											
 											// if( sizeof( $where ) )
 											// $sql .= ' WHERE '.implode( ' AND ',$where );
 											//echo $sql; imrpime a query montada
@@ -94,7 +95,7 @@ include_once "head.php";
 														 <td><?php echo $row['nome_da_area'] ?></td>
 													<?php } else { ?><td><?php echo ("Aluno deseja sua orientação sem importar a área") ?></td><?php } ?>
 										 				<td class="acoes-pesquisa-usuario">
-														 <i class="btn btn-default btn-xs fa fa-check" title="Aprovar" aria-hidden="true" onclick="aceitarSolicitacao(<?php echo $row['matricula'] ?>)"></i>
+														 <i class="btn btn-default btn-xs fa fa-check" title="Aprovar" aria-hidden="true" onclick="aceitarSolicitacao(<?php echo $row['matricula'] ?>,'<?php echo $row['nome_da_area'] ?>')"></i>
 														 <i class="btn btn-danger btn-xs fa fa-times" title="Rejeitar" aria-hidden="true" onclick="rejeitarSolicitacao(<?php echo $row['matricula'] ?>)"></i>
 										 				</td>
 										 			</tr>
@@ -115,36 +116,16 @@ include_once "head.php";
 				</div>
 			</div>
 			
-		<!-- Função ajax da pesquisa action="../model/pesquisa-item.php"-->
-		<script>
-			$(document).ready(function(){
-				$('#btn-pesquisar').click(function(){
-					var dados = $('#pesquisar-form').serialize();
-					jQuery.ajax({
-						type: "POST",
-						url: "../model/solicitacao-de-orientacao.php",
-						data: dados,
-						success: function(data)
-						{
-							$('tbody').html(data);
-							$("#table-pesquisa").show();
-						}
-					});			
-					return false;
-				});
-			});
-		</script>
-
 		<!-- Função ajax para solicitar orientação-->
 		<script>
 
-		function solicitarOrientacao(matricula, area){
+		function aceitarSolicitacao(matriculaAluno, area){
 			var confirmacao = confirm("Confirma a solicitação?");
 			if (confirmacao == true) {
-				var mydata = { matricula: matricula , area: area};
+				var mydata = { matricula: matriculaAluno, area: area};
 				jQuery.ajax({
 					type: "POST",
-					url: "../model/solicitar-orientacao.php",
+					url: "../model/aprovar-orientacao.php",
 					data: mydata,
 					success: function(data)
 					{					
