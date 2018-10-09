@@ -70,7 +70,8 @@ include_once "head.php";
 											$sql = "SELECT * FROM solicitacao_de_orientacao so 
 											JOIN professores p on so.matricula_professor =  p.matricula 
 											JOIN alunos al on so.matricula_aluno = al.matricula											
-											WHERE so.matricula_professor = $matriculaProfessor";
+											WHERE so.status = 'Aguardando'
+											AND so.matricula_professor = $matriculaProfessor";
 											
 											// if( sizeof( $where ) )
 											// $sql .= ' WHERE '.implode( ' AND ',$where );
@@ -131,6 +132,7 @@ include_once "head.php";
 					{					
 						data = JSON.parse(data);
 						alert(data.mensagem);
+						location.reload();
 					}
 				});		
 			}else {

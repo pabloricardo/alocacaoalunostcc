@@ -60,7 +60,11 @@
             $updateHorasProfessor = "UPDATE `professores` SET `quantidade_orientacoes`= $horasProfessor 
             WHERE matricula = $matriculaProfessor";
             $link->query($updateHorasProfessor);  
-            
+
+            $deleteOutrasSolicitacoesDoAluno = "DELETE FROM `solicitacao_de_orientacao` 
+            WHERE matricula_aluno = $matriculaAluno 
+            AND status <> 'Aprovado'";
+            $link->query($deleteOutrasSolicitacoesDoAluno);
             $retorno = array('mensagem' => "Solicitação aprovada");
         }else{
             $retorno = array('mensagem' => "Não foi possivel aprovar a solicitação");
