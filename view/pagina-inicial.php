@@ -30,7 +30,7 @@ include_once "head.php";
 					<a class="btn btn-primary btn-block btn-lg" href="areas.php">Áreas</a>		
 				</div> <!-- / .form-actions -->
 				<div class="form-actions">
-					<a class="btn btn-primary btn-block btn-lg" href="pages-404.php">Relatório</a>		
+					<a class="btn btn-primary btn-block btn-lg" href="relatorio-alunos-orientados.php">Relatório</a>		
 				</div> <!-- / .form-actions -->
 				<?php }	?>	
 				<?php if($_SESSION['permissao'] == 1 || $_SESSION['permissao'] == 3){?>	
