@@ -1,5 +1,5 @@
 <?php
-	define('DB_HOSTNAME', 'mysql.hostinger.com.br');
+	define('DB_HOSTNAME', 'mysql');
 	define('DB_USERNAME', 'u681047708_aloca');
 	define('DB_PASSWORD', '497982');
 	define('DB_DATABASE','u681047708_tcc');
