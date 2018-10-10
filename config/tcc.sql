@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Set-2018 às 01:36
+-- Generation Time: 11-Out-2018 às 01:34
 -- Versão do servidor: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -32,22 +32,8 @@ CREATE TABLE `alunos` (
   `nome` varchar(50) CHARACTER SET utf8 NOT NULL,
   `matricula` int(6) NOT NULL,
   `email` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `matricula_professor` int(6) DEFAULT NULL,
-  `possui_orientador` varchar(10) CHARACTER SET utf8 DEFAULT 'Não',
   `disciplina` varchar(50) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `alunos`
---
-
-INSERT INTO `alunos` (`nome`, `matricula`, `email`, `matricula_professor`, `possui_orientador`, `disciplina`) VALUES
-('Michael Bruno Pereira de Castilho', 312211, NULL, NULL, 'Não', 'TCC02'),
-('Thiago Vinícius Oliveira Guimarăes', 374292, NULL, NULL, 'Não', 'TCC02'),
-('Davidson Felipe Caetano de Morais', 413695, NULL, NULL, 'Não', 'TCC02'),
-('Barbara Danielly Neto Tavares', 469793, NULL, NULL, 'Não', 'TCC02'),
-('Heitor Laurentino Terozendi Silva', 515095, NULL, NULL, 'Não', 'TCC02'),
-('Pedro Lucas Duarte Faria', 536589, NULL, NULL, 'Não', 'TCC02');
 
 -- --------------------------------------------------------
 
@@ -65,13 +51,14 @@ CREATE TABLE `area` (
 --
 
 INSERT INTO `area` (`nome_da_area`, `id_area`) VALUES
-('Engenharia de requisitos', 23),
-('Testes', 24),
-('AED', 26),
-('Gerenciamento de projetos', 27),
-('ITIL', 29),
-('ddddddd', 32),
-('Mineração de dados', 33);
+('AED', 37),
+('Banco de Dados', 38),
+('Matemática Discreta', 39),
+('Testes', 40),
+('Arquitetura de software', 41),
+('Engenharia de Requisitos', 42),
+('Grafos', 43),
+('Administração', 44);
 
 -- --------------------------------------------------------
 
@@ -83,18 +70,6 @@ CREATE TABLE `area_professores` (
   `id_area` int(11) NOT NULL,
   `matricula` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `area_professores`
---
-
-INSERT INTO `area_professores` (`id_area`, `matricula`) VALUES
-(23, 333333),
-(26, 333333),
-(26, 444444),
-(29, 444444),
-(33, 222222),
-(33, 555555);
 
 -- --------------------------------------------------------
 
@@ -112,16 +87,6 @@ CREATE TABLE `professores` (
   `descricao` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `professores`
---
-
-INSERT INTO `professores` (`nome`, `matricula`, `disciplina`, `quantidade_orientacoes`, `email`, `status`, `descricao`) VALUES
-('Professor01', 222222, 'Ambas', 2, 'professor01@professor01.com', 'Ativo', 'desc01 edit'),
-('Professor03AedTcc01', 333333, 'TCC01', 3, 'prof3@prof3.com', 'Ativo', 'teste abc'),
-('Professor04ItilTcc02', 444444, 'TCC02', 4, 'prof4@prof4.com', 'Ativo', NULL),
-('test', 555555, 'Ambas', 5, 'prof5@prof5.com', 'Ativo', 'prof5@prof5.com');
-
 -- --------------------------------------------------------
 
 --
@@ -134,13 +99,6 @@ CREATE TABLE `solicitacao_de_orientacao` (
   `nome_da_area` varchar(50) NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `solicitacao_de_orientacao`
---
-
-INSERT INTO `solicitacao_de_orientacao` (`matricula_professor`, `matricula_aluno`, `nome_da_area`, `status`) VALUES
-(1, 312211, 'Engenharia de requisitos', 'Aguardando');
 
 -- --------------------------------------------------------
 
@@ -159,14 +117,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`matricula`, `senha`, `permissao`) VALUES
-(312211, '1111111', 1),
-(333333, '3', 3),
-(374292, '374292', 1),
-(413695, '413695', 1),
-(469793, '469793', 1),
-(515095, '515095', 1),
-(536589, '1111111', 1),
-(555555, '555555', 2);
+(123123, '1', 3);
 
 --
 -- Indexes for dumped tables
@@ -216,7 +167,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `area`
 --
 ALTER TABLE `area`
-  MODIFY `id_area` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_area` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
