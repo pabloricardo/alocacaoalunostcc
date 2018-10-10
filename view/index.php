@@ -65,9 +65,9 @@ session_destroy();
 				</div> <!-- / Username -->
 
 
-				<div>
+				<!-- <div>
 					<a href="#" class="forgot-password link-esquecer-senha" data-toggle="modal" data-target="#modal-recuperar-senha" id="recuperar-senha">Equeceu sua senha?</a>
-				</div>
+				</div> -->
 				<div class="form-actions text-right">
 					<button type="submit" id="btn-login" value="acessar" class="btn btn-primary btn-lg">Acessar</button>		
 				</div> <!-- / .form-actions -->
