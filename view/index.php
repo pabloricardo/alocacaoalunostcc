@@ -33,9 +33,9 @@ session_destroy();
 				 Solicitação de orientação em TCC.
 			</div> <!-- / .slogan -->
 			<ul>
-				<li><i class="fa fa-sitemap signin-icon"></i>Solicitação de orientação</li>
+				<!-- <li><i class="fa fa-sitemap signin-icon"></i>Solicitação de orientação</li>
 				<li><i class="fa fa-outdent signin-icon"></i>Aprovoção de orientação</li>
-				<li><i class="fa fa-heart signin-icon"></i> Relatórios</li>
+				<li><i class="fa fa-heart signin-icon"></i> Relatórios</li> -->
 			</ul> <!-- / Info list -->
 		</div>
 		<!-- / Left side -->
