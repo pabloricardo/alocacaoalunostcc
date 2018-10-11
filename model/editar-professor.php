@@ -1,6 +1,6 @@
 <?php
-	require '../view/config.php';
-	require '../view/connection.php';
+	require 'config.php';
+	require 'connection.php';
 	$link = DBConnect();
 
 	$nome = $_POST['editar-nome'];

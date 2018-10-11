@@ -1,7 +1,7 @@
 <?php
 	include_once "conferir-autenticacao.php";
-	require '../view/config.php';
-	require '../view/connection.php';
+	require 'config.php';
+	require 'connection.php';
 	$link = DBConnect();
 
 	$nome = $_POST['nome'];

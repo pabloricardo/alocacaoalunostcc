@@ -43,8 +43,8 @@ include_once "modal-editar-dados-professor.php";
 				<div class="row">
 					<?php
 					#chama o arquivo de configuração com o banco
-					require './config.php';
-					require './connection.php';
+					require '../model/config.php';
+					require '../model/connection.php';
 					$link = DBConnect();
 					#seleciona os dados da tabela produto
 					$sql = "SELECT nome FROM `professores`";

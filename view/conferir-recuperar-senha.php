@@ -1,6 +1,6 @@
 <?php 
-require 'config.php';
-require 'connection.php';
+require '../model/config.php';
+require '../model/connection.php';
 
 $cpf = $_POST['cpf-recuperar-senha'];
 $datanascimento = strtr($_POST['datanascimento'], '/', '-');

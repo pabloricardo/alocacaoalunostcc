@@ -1,7 +1,7 @@
 <?php
 
-require './config.php';
-require './connection.php';
+require 'config.php';
+require 'connection.php';
 
 $link = DBConnect();
 

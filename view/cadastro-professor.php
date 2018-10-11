@@ -71,8 +71,8 @@ include_once "head.php";
 					<div class="col-sm-4">
 					<?php
 					#chama o arquivo de configuração com o banco
-					require './config.php';
-					require './connection.php';
+					require '../model/config.php';
+					require '../model/connection.php';
 					#chama o arquivo de configuração com o banco
 					$link = DBConnect();
 					#seleciona os dados da tabela produto

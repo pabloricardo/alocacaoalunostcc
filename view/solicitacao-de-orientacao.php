@@ -33,8 +33,8 @@ include_once "head.php";
 	</nav>
 	<?php
 					#chama o arquivo de configuração com o banco
-					require './config.php';
-					require './connection.php';
+					require '../model/config.php';
+					require '../model/connection.php';
 					$matriculaAluno = $_SESSION['matricula'];
 					$link = DBConnect();
 					$verificaStatus = "SELECT * FROM `solicitacao_de_orientacao` Where matricula_aluno = $matriculaAluno and status = 'Aprovado' ";

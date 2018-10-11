@@ -61,8 +61,8 @@
 										<tbody>
 <?php									
 
-			require 'config.php';
-			require 'connection.php';
+			require '../model/config.php';
+			require '../model/connection.php';
 			$link = DBConnect();
 
 					 $sql = " SELECT *, p.nome AS profnome, p.matricula AS profmatricula, p.email AS profemail, p.disciplina AS profdisciplina
