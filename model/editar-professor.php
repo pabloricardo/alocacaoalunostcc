@@ -17,11 +17,7 @@
 	descricao = '$descricao'
 	WHERE matricula = $matricula";
 
-	var_dump($update);
-
 	$alterar = $link->query($update);
-	
-	var_dump($alterar);
 
 	$sql = "SELECT * FROM `professores` WHERE matricula = $matricula";
 	$result = $link->query($sql);

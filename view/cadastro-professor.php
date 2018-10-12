@@ -68,7 +68,7 @@ include_once "head.php";
 							<option>Ambas</option>
 						</select>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 					<?php
 					#chama o arquivo de configuração com o banco
 					require '../model/config.php';
@@ -85,7 +85,7 @@ include_once "head.php";
 								<?php } ?>
 					</select>
 					</div>
-					<div class="col-sm-2">
+					<div class="col-sm-3">
 						<div class="form-group no-margin-hr">
 							<label class="control-label">Quantidade de orientações</label>
 							<input id="quantidade_orientacoes" name="quantidade_orientacoes" class="form-control" placeholder="Quantidade de orientações">

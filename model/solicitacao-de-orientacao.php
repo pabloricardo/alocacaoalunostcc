@@ -67,7 +67,6 @@
 
 		//echo ($sql); imrpime a query montada
 	//Executa query
-	var_dump($sql);
 	$result = $link->query($sql);
 	if ($result->num_rows > 0) {
 		// Pega cada linha retornada e executa os comandos
