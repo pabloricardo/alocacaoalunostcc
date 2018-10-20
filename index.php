@@ -1,3 +1,3 @@
 <?php
-header('location:sistema/view/index.php');
+header('location:view/index.php');
 ?>
