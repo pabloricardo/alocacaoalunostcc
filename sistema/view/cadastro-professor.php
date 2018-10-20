@@ -153,7 +153,7 @@ $('#my-select').multiSelect({
 				var dados = $(form).serialize();
 				jQuery.ajax({
 					type: "POST",
-					url: "../model/cadastro-professor.php",
+					url: "http://alocacaotcc.esy.es/api-alocacao-alunos-tcc/public/api/professor/cadastrar",
 					data: dados,
 					success: function(data)
 					{
