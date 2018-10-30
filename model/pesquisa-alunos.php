@@ -16,6 +16,7 @@
 					 $sql = "SELECT * FROM alunos ";
 					if( sizeof( $where ) )
 						$sql .= ' WHERE '.implode( ' AND ',$where );
+						$sql .= 'ORDER BY nome';
 					//echo $sql; imrpime a query montada
 				//Executa query
 				$result = $link->query($sql);
