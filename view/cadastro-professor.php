@@ -161,14 +161,14 @@ $('#areas').multiSelect({
 						if(data.status == true){
 							$("div.mensagem-inserir-usuario").show();
 							$("div.mensagem-inserir-usuario").addClass("alert-success");
-	        				$("div.mensagem-inserir-usuario").html(data.message);
+	        				$("div.mensagem-inserir-usuario").html(data.menssagem);
 							$('#areas').multiSelect('deselect_all');
 	        				$('#cadastro-professor').each (function(){this.reset();});
 						}
 						else{
 							$("div.mensagem-inserir-usuario").show();
 							$("div.mensagem-inserir-usuario").addClass("alert-danger");
-	        				$("div.mensagem-inserir-usuario").html(data.message);		
+	        				$("div.mensagem-inserir-usuario").html(data.menssagem);		
 						}
 						setTimeout(function(){ $("div.mensagem-inserir-usuario").hide();}, 3000);
 					}
