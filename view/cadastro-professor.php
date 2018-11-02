@@ -157,11 +157,12 @@ $('#my-select').multiSelect({
 					data: dados,
 					success: function(data)
 					{
-						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");
+						data = JSON.parse(data);						
+						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");						
 						if(data.status == true){
 							$("div.mensagem-inserir-usuario").show();
 							$("div.mensagem-inserir-usuario").addClass("alert-success");
-	        				$("div.mensagem-inserir-usuario").html(data.menssagem);
+	        				$("div.mensagem-inserir-usuario").html(data.mensagem);
 							$('#my-select').multiSelect('deselect_all');
 	        				$('#cadastro-professor').each (function(){this.reset();});
 						}
