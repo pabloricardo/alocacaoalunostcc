@@ -79,7 +79,7 @@ include_once "head.php";
 					$sqlArea = "SELECT * FROM `area` order by nome_da_area";
 					$result = $link->query($sqlArea);
 					?>
-					<select class="form-control" multiple="multiple" id="my-select" name="my-select[]">		
+					<select class="form-control" multiple="multiple" id="areas" name="areas[]">		
 								<?php  while($row = $result->fetch_assoc()) {?>
 								<option value="<?php echo $row['id_area'] ?>"><?php echo $row['nome_da_area'] ?></option>
 								<?php } ?>
@@ -118,7 +118,7 @@ include_once "head.php";
 <script src="assets/javascripts/bootstrap.min.js"></script>
 <script src="assets/javascripts/pixel-admin.min.js"></script>
 <script>
-$('#my-select').multiSelect({
+$('#areas').multiSelect({
   selectableHeader: "<div class='custom-header'>Areas existente</div>",
   selectionHeader: "<div class='custom-header'>Areas selecionadas</div>"
 })
@@ -147,7 +147,7 @@ $('#my-select').multiSelect({
 				matricula: { required: true, minlength: 6, maxlength:6, number: true },
 				email: { required: true, email:true },
 				quantidade_orientacoes: {required: true, number: true},
-				disciplina: { required: true }
+				disciplina: { required: true },
 			},
 			submitHandler: function(form){
 				var dados = $(form).serialize();
@@ -156,20 +156,19 @@ $('#my-select').multiSelect({
 					url: "http://alocacaotcc.esy.es/api-alocacao-alunos-tcc/public/api/professor/cadastrar",
 					data: dados,
 					success: function(data)
-					{
-						data = JSON.parse(data);						
+					{	
 						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");						
 						if(data.status == true){
 							$("div.mensagem-inserir-usuario").show();
 							$("div.mensagem-inserir-usuario").addClass("alert-success");
-	        				$("div.mensagem-inserir-usuario").html(data.mensagem);
-							$('#my-select').multiSelect('deselect_all');
+	        				$("div.mensagem-inserir-usuario").html(data.message);
+							$('#areas').multiSelect('deselect_all');
 	        				$('#cadastro-professor').each (function(){this.reset();});
 						}
 						else{
 							$("div.mensagem-inserir-usuario").show();
 							$("div.mensagem-inserir-usuario").addClass("alert-danger");
-	        				$("div.mensagem-inserir-usuario").html(data.mensagem);		
+	        				$("div.mensagem-inserir-usuario").html(data.message);		
 						}
 						setTimeout(function(){ $("div.mensagem-inserir-usuario").hide();}, 3000);
 					}
@@ -179,6 +178,6 @@ $('#my-select').multiSelect({
 		});
 	});
 </script>
-	
+
 </body>
 </html>
