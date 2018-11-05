@@ -163,7 +163,7 @@ $('#areas').multiSelect({
 							$("div.mensagem-inserir-usuario").show();
 							$("div.mensagem-inserir-usuario").addClass("alert-success");
 	        				$("div.mensagem-inserir-usuario").html(data.mensagem);
-							$('#my-select').multiSelect('deselect_all');
+							$('#areas').multiSelect('deselect_all');
 	        				$('#cadastro-professor').each (function(){this.reset();});
 						}
 						else{

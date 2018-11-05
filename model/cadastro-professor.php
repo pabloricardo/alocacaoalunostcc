@@ -27,8 +27,8 @@ values ('$nome' , $matricula, '$disciplina', $quantidade_orientacoes, '$email', 
 
 if($link->query($query)){ 
 
-	if (isset($_POST['my-select'])) { 
-		$areas = $_POST['my-select'];
+	if (isset($_POST['areas'])) { 
+		$areas = $_POST['areas'];
 		foreach ($areas as $value) {
 			$query = "insert into area_professores (id_area, matricula) 
 		values ($value , $matricula)";
