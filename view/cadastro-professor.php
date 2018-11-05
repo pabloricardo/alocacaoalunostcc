@@ -147,6 +147,46 @@ $('#areas').multiSelect({
 				matricula: { required: true, minlength: 6, maxlength:6, number: true },
 				email: { required: true, email:true },
 				quantidade_orientacoes: {required: true, number: true},
+				disciplina: { required: true }
+			},
+			submitHandler: function(form){
+				var dados = $(form).serialize();
+				jQuery.ajax({
+					type: "POST",
+					url: "../model/cadastro-professor.php",
+					data: dados,
+					success: function(data)
+					{
+						data = JSON.parse(data);						
+						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");						
+						if(data.status == true){
+							$("div.mensagem-inserir-usuario").show();
+							$("div.mensagem-inserir-usuario").addClass("alert-success");
+	        				$("div.mensagem-inserir-usuario").html(data.mensagem);
+							$('#my-select').multiSelect('deselect_all');
+	        				$('#cadastro-professor').each (function(){this.reset();});
+						}
+						else{
+							$("div.mensagem-inserir-usuario").show();
+							$("div.mensagem-inserir-usuario").addClass("alert-danger");
+	        				$("div.mensagem-inserir-usuario").html(data.mensagem);		
+						}
+						setTimeout(function(){ $("div.mensagem-inserir-usuario").hide();}, 3000);
+					}
+				});			
+				return false;
+			}
+		});
+	});
+</script>
+<!-- <script type="text/javascript">
+	$().ready(function(){
+		$('#cadastro-professor').validate({
+			rules: {
+				nome: { required: true },
+				matricula: { required: true, minlength: 6, maxlength:6, number: true },
+				email: { required: true, email:true },
+				quantidade_orientacoes: {required: true, number: true},
 				disciplina: { required: true },
 			},
 			submitHandler: function(form){
@@ -177,7 +217,7 @@ $('#areas').multiSelect({
 			}
 		});
 	});
-</script>
+</script> -->
 
 </body>
 </html>
