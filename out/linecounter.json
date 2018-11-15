@@ -1,0 +1,1560 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.2",
+    "workspace": "c:\\wamp64\\www\\alocacaotcc",
+    "linecount": [
+        {
+            "version": "0.2.2",
+            "counttime": "2018-11-11 18:25:52",
+            "filesum": 247,
+            "codesum": 72632,
+            "commentsum": 15823,
+            "blanksum": 11124,
+            "statistics": {
+                ".php": {
+                    "code": 2772,
+                    "comment": 134,
+                    "blank": 443
+                },
+                ".txt": {
+                    "code": 7,
+                    "comment": 0,
+                    "blank": 1
+                },
+                ".sql": {
+                    "code": 64,
+                    "comment": 75,
+                    "blank": 43
+                },
+                "": {
+                    "code": 0,
+                    "comment": 0,
+                    "blank": 3
+                },
+                ".js": {
+                    "code": 41272,
+                    "comment": 14778,
+                    "blank": 7644
+                },
+                ".css": {
+                    "code": 26057,
+                    "comment": 202,
+                    "blank": 2457
+                },
+                ".less": {
+                    "code": 2041,
+                    "comment": 634,
+                    "blank": 533
+                },
+                ".svg": {
+                    "code": 419,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "filename": "analise-de-alternativas.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "analise-de-alternativas.zip",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "config\\config.php"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 2,
+                    "filename": "config\\connection.php"
+                },
+                {
+                    "blank": 43,
+                    "code": 64,
+                    "comment": 75,
+                    "filename": "config\\tcc.sql"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "Falta desenvolver.txt"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "index.php"
+                },
+                {
+                    "blank": 12,
+                    "code": 53,
+                    "comment": 6,
+                    "filename": "model\\aprovar-orientacao.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "model\\cadastrar-senha.php"
+                },
+                {
+                    "blank": 8,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "model\\cadastro-aluno.php"
+                },
+                {
+                    "blank": 5,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "model\\cadastro-area.php"
+                },
+                {
+                    "blank": 15,
+                    "code": 29,
+                    "comment": 3,
+                    "filename": "model\\cadastro-professor.php"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 5,
+                    "filename": "model\\conferir-autenticacao.php"
+                },
+                {
+                    "blank": 4,
+                    "code": 32,
+                    "comment": 0,
+                    "filename": "model\\conferir-login.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "model\\config.php"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 2,
+                    "filename": "model\\connection.php"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 1,
+                    "filename": "model\\deletar-aluno.php"
+                },
+                {
+                    "blank": 3,
+                    "code": 10,
+                    "comment": 1,
+                    "filename": "model\\deletar-area.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": "model\\editar-aluno.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 14,
+                    "comment": 1,
+                    "filename": "model\\editar-area.php"
+                },
+                {
+                    "blank": 5,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "model\\editar-professor.php"
+                },
+                {
+                    "blank": 9,
+                    "code": 27,
+                    "comment": 3,
+                    "filename": "model\\importar-alunos-csv.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "model\\modal-editar-dados-aluno.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "model\\modal-editar-dados-area.php"
+                },
+                {
+                    "blank": 4,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "model\\modal-editar-dados-professor.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 34,
+                    "comment": 6,
+                    "filename": "model\\pesquisa-alunos.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 29,
+                    "comment": 6,
+                    "filename": "model\\pesquisa-area.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 31,
+                    "comment": 6,
+                    "filename": "model\\pesquisa-professores.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 30,
+                    "comment": 6,
+                    "filename": "model\\relatorio-doacao.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 28,
+                    "comment": 6,
+                    "filename": "model\\relatorio-usuario.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 29,
+                    "comment": 6,
+                    "filename": "model\\relatorio.php"
+                },
+                {
+                    "blank": 11,
+                    "code": 82,
+                    "comment": 5,
+                    "filename": "model\\solicitacao-de-orientacao.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 17,
+                    "comment": 3,
+                    "filename": "model\\solicitar-orientacao.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "model\\visualizar-professor.php"
+                },
+                {
+                    "blank": 3,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "view\\.htaccess"
+                },
+                {
+                    "blank": 14,
+                    "code": 181,
+                    "comment": 2,
+                    "filename": "view\\aluno.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 30,
+                    "comment": 0,
+                    "filename": "view\\aprovacao-de-orientacao.php"
+                },
+                {
+                    "blank": 17,
+                    "code": 151,
+                    "comment": 1,
+                    "filename": "view\\areas.php"
+                },
+                {
+                    "blank": 61,
+                    "code": 507,
+                    "comment": 29,
+                    "filename": "view\\assets\\demo\\demo.js"
+                },
+                {
+                    "blank": 645,
+                    "code": 4256,
+                    "comment": 912,
+                    "filename": "view\\assets\\demo\\less-1.7.0.js"
+                },
+                {
+                    "blank": 95,
+                    "code": 659,
+                    "comment": 189,
+                    "filename": "view\\assets\\demo\\less\\bootstrap-mixins.less"
+                },
+                {
+                    "blank": 202,
+                    "code": 366,
+                    "comment": 271,
+                    "filename": "view\\assets\\demo\\less\\bootstrap-variables.less"
+                },
+                {
+                    "blank": 18,
+                    "code": 88,
+                    "comment": 0,
+                    "filename": "view\\assets\\demo\\less\\colors.less"
+                },
+                {
+                    "blank": 184,
+                    "code": 885,
+                    "comment": 147,
+                    "filename": "view\\assets\\demo\\less\\mixins.less"
+                },
+                {
+                    "blank": 34,
+                    "code": 43,
+                    "comment": 27,
+                    "filename": "view\\assets\\demo\\less\\variables.less"
+                },
+                {
+                    "filename": "view\\assets\\demo\\logo-big.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\demo\\signin-bg-1.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\fonts\\font-awesome\\fontawesome-webfont.eot",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 414,
+                    "comment": 0,
+                    "filename": "view\\assets\\fonts\\font-awesome\\fontawesome-webfont.svg"
+                },
+                {
+                    "filename": "view\\assets\\fonts\\font-awesome\\fontawesome-webfont.ttf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\fonts\\font-awesome\\fontawesome-webfont.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\fonts\\font-awesome\\FontAwesome.otf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\pixel-admin\\avatar.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\pixel-admin\\blank.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "view\\assets\\images\\pixel-admin\\blur.svg"
+                },
+                {
+                    "filename": "view\\assets\\images\\pixel-admin\\main-menu-bg.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\pixel-admin\\main-navbar-bg.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\pixel-admin\\main-navbar-logo.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\plugins\\bootstrap-editable\\loading.gif",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\plugins\\jquery.minicolors.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\themes\\adminflare\\body-bg.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\themes\\adminflare\\ie-navbar-bg.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\themes\\adminflare\\menu-bg.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "view\\assets\\images\\themes\\clean\\body-bg.gif",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\additional-methods.min.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\javascripts\\bootstrap-editable-demo.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\javascripts\\bootstrap-editable-demo.min.js"
+                },
+                {
+                    "blank": 493,
+                    "code": 1267,
+                    "comment": 202,
+                    "filename": "view\\assets\\javascripts\\bootstrap.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\javascripts\\bootstrap.min.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\javascripts\\demo-mock.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\javascripts\\demo-mock.min.js"
+                },
+                {
+                    "blank": 91,
+                    "code": 487,
+                    "comment": 100,
+                    "filename": "view\\assets\\javascripts\\ie.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "view\\assets\\javascripts\\ie.min.js"
+                },
+                {
+                    "blank": 207,
+                    "code": 1658,
+                    "comment": 405,
+                    "filename": "view\\assets\\javascripts\\jquery-ui-extras.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "view\\assets\\javascripts\\jquery-ui-extras.min.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 2,
+                    "filename": "view\\assets\\javascripts\\jquery.min.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\javascripts\\jquery.mockjax.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\javascripts\\jquery.mockjax.min.js"
+                },
+                {
+                    "blank": 83,
+                    "code": 447,
+                    "comment": 17,
+                    "filename": "view\\assets\\javascripts\\jquery.multi-select.js"
+                },
+                {
+                    "blank": 28,
+                    "code": 121,
+                    "comment": 23,
+                    "filename": "view\\assets\\javascripts\\jquery.table2excel.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\jquery.validate.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ar.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ar.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_az.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_az.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_bg.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_bg.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_bn_BD.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_bn_BD.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ca.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ca.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_cs.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_cs.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 27,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_da.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_da.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 27,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_de.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_de.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_el.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_el.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 33,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_es.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_es.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 33,
+                    "comment": 5,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_es_AR.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_es_AR.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 33,
+                    "comment": 5,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_es_PE.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_es_PE.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 28,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_et.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_et.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_eu.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_eu.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 33,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_fa.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_fa.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 28,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_fi.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_fi.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 58,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_fr.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_fr.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 29,
+                    "comment": 5,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ge.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ge.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 35,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_gl.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_gl.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_he.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_he.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_hr.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_hr.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_hu.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_hu.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_hy_AM.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_hy_AM.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 29,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_id.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_id.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 28,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_is.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_is.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 34,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_it.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_it.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 31,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ja.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ja.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ka.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ka.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_kk.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_kk.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ko.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ko.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_lt.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_lt.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_lv.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_lv.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_mk.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_mk.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_my.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_my.min.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 39,
+                    "comment": 5,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_nl.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_nl.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 31,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_no.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_no.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 32,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_pl.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_pl.min.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 78,
+                    "comment": 7,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_pt_BR.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_pt_BR.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 33,
+                    "comment": 5,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_pt_PT.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_pt_PT.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ro.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ro.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ru.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ru.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sd.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sd.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_si.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_si.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 27,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sk.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sk.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sl.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sl.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sr.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sr.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sr_lat.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sr_lat.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 28,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sv.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_sv.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_th.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_th.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_tj.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_tj.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 31,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_tr.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_tr.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_uk.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_uk.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ur.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_ur.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_vi.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_vi.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_zh.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_zh.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 30,
+                    "comment": 5,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_zh_TW.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\messages_zh_TW.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 19,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_de.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_de.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 19,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_es_CL.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_es_CL.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 19,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_fi.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_fi.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 19,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_nl.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_nl.min.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 16,
+                    "comment": 4,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_pt.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "view\\assets\\javascripts\\localization\\methods_pt.min.js"
+                },
+                {
+                    "blank": 5972,
+                    "code": 30565,
+                    "comment": 12642,
+                    "filename": "view\\assets\\javascripts\\pixel-admin.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 17,
+                    "comment": 2,
+                    "filename": "view\\assets\\javascripts\\pixel-admin.min.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 1,
+                    "filename": "view\\assets\\javascripts\\utilidades.js"
+                },
+                {
+                    "blank": 848,
+                    "code": 4344,
+                    "comment": 1,
+                    "filename": "view\\assets\\stylesheets\\bootstrap.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "view\\assets\\stylesheets\\bootstrap.min.css"
+                },
+                {
+                    "blank": 13,
+                    "code": 107,
+                    "comment": 1,
+                    "filename": "view\\assets\\stylesheets\\customizacao.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 392,
+                    "comment": 112,
+                    "filename": "view\\assets\\stylesheets\\googleapis.css"
+                },
+                {
+                    "blank": 10,
+                    "code": 83,
+                    "comment": 0,
+                    "filename": "view\\assets\\stylesheets\\multi-select.css"
+                },
+                {
+                    "blank": 43,
+                    "code": 1632,
+                    "comment": 2,
+                    "filename": "view\\assets\\stylesheets\\pages.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\stylesheets\\pages.min.css"
+                },
+                {
+                    "blank": 1492,
+                    "code": 10528,
+                    "comment": 64,
+                    "filename": "view\\assets\\stylesheets\\pixel-admin.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 16,
+                    "filename": "view\\assets\\stylesheets\\pixel-admin.min.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 2218,
+                    "comment": 5,
+                    "filename": "view\\assets\\stylesheets\\rtl.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\stylesheets\\rtl.min.css"
+                },
+                {
+                    "blank": 15,
+                    "code": 6097,
+                    "comment": 0,
+                    "filename": "view\\assets\\stylesheets\\themes.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\stylesheets\\themes.min.css"
+                },
+                {
+                    "blank": 29,
+                    "code": 649,
+                    "comment": 0,
+                    "filename": "view\\assets\\stylesheets\\widgets.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "view\\assets\\stylesheets\\widgets.min.css"
+                },
+                {
+                    "blank": 8,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "view\\cadastrar-senha.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 62,
+                    "comment": 1,
+                    "filename": "view\\cadastro-aluno.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 50,
+                    "comment": 1,
+                    "filename": "view\\cadastro-area.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 110,
+                    "comment": 0,
+                    "filename": "view\\cadastro-professor.php"
+                },
+                {
+                    "blank": 8,
+                    "code": 25,
+                    "comment": 17,
+                    "filename": "view\\conferir-recuperar-senha.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "view\\config.php"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 2,
+                    "filename": "view\\connection.php"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "view\\head.php"
+                },
+                {
+                    "blank": 28,
+                    "code": 136,
+                    "comment": 0,
+                    "filename": "view\\index.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "view\\mensagens.php"
+                },
+                {
+                    "blank": 1,
+                    "code": 58,
+                    "comment": 0,
+                    "filename": "view\\modal-editar-dados-aluno.php"
+                },
+                {
+                    "blank": 1,
+                    "code": 46,
+                    "comment": 0,
+                    "filename": "view\\modal-editar-dados-area.php"
+                },
+                {
+                    "blank": 1,
+                    "code": 88,
+                    "comment": 0,
+                    "filename": "view\\modal-editar-dados-professor.php"
+                },
+                {
+                    "blank": 0,
+                    "code": 42,
+                    "comment": 0,
+                    "filename": "view\\modal-visualizar-dados-professor.php"
+                },
+                {
+                    "blank": 7,
+                    "code": 26,
+                    "comment": 1,
+                    "filename": "view\\pages-404.php"
+                },
+                {
+                    "blank": 6,
+                    "code": 50,
+                    "comment": 0,
+                    "filename": "view\\pagina-inicial.php"
+                },
+                {
+                    "blank": 12,
+                    "code": 165,
+                    "comment": 0,
+                    "filename": "view\\professores.php"
+                },
+                {
+                    "blank": 26,
+                    "code": 94,
+                    "comment": 8,
+                    "filename": "view\\relatorio-alunos-orientados.php"
+                },
+                {
+                    "blank": 19,
+                    "code": 104,
+                    "comment": 2,
+                    "filename": "view\\relatorio-doacao.php"
+                },
+                {
+                    "blank": 19,
+                    "code": 103,
+                    "comment": 2,
+                    "filename": "view\\relatorio-item.php"
+                },
+                {
+                    "blank": 19,
+                    "code": 103,
+                    "comment": 2,
+                    "filename": "view\\relatorio-usuario.php"
+                },
+                {
+                    "blank": 5,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "view\\relatorio.php"
+                },
+                {
+                    "blank": 9,
+                    "code": 90,
+                    "comment": 0,
+                    "filename": "view\\solicitacao-de-orientacao.php"
+                },
+                {
+                    "blank": 8,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "view\\sucesso.php"
+                },
+                {
+                    "blank": 14,
+                    "code": 190,
+                    "comment": 0,
+                    "filename": "view\\tabela doacoes.php"
+                },
+                {
+                    "blank": 23,
+                    "code": 63,
+                    "comment": 26,
+                    "filename": "view\\teste.php"
+                }
+            ]
+        }
+    ]
+}

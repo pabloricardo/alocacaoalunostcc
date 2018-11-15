@@ -1,0 +1,271 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.2
+-------------------------------------------------------------------------------
+count time : 2018-11-11 18:25:52
+count workspace : c:\wamp64\www\alocacaotcc
+total files : 247
+total code lines : 72632
+total comment lines : 15823
+total blank lines : 11124
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |           .php|           2772|            134|            443|    3.8|
+   |           .txt|              7|              0|              1| 0.0096|
+   |           .sql|             64|             75|             43|  0.088|
+   |               |              0|              0|              3|    0.0|
+   |            .js|          41272|          14778|           7644|     57|
+   |           .css|          26057|            202|           2457|     36|
+   |          .less|           2041|            634|            533|    2.8|
+   |           .svg|            419|              0|              0|   0.58|
+   -------------------------------------------------------------------------
+analise-de-alternativas.pdf, it is a binary file.
+analise-de-alternativas.zip, it is a binary file.
+config\config.php, code is 8, comment is 0, blank is 0.
+config\connection.php, code is 10, comment is 2, blank is 2.
+config\tcc.sql, code is 64, comment is 75, blank is 43.
+Falta desenvolver.txt, code is 7, comment is 0, blank is 1.
+index.php, code is 3, comment is 0, blank is 0.
+model\aprovar-orientacao.php, code is 53, comment is 6, blank is 12.
+model\cadastrar-senha.php, code is 17, comment is 0, blank is 7.
+model\cadastro-aluno.php, code is 18, comment is 0, blank is 8.
+model\cadastro-area.php, code is 14, comment is 0, blank is 5.
+model\cadastro-professor.php, code is 29, comment is 3, blank is 15.
+model\conferir-autenticacao.php, code is 9, comment is 5, blank is 1.
+model\conferir-login.php, code is 32, comment is 0, blank is 4.
+model\config.php, code is 8, comment is 0, blank is 0.
+model\connection.php, code is 10, comment is 2, blank is 2.
+model\deletar-aluno.php, code is 12, comment is 1, blank is 4.
+model\deletar-area.php, code is 10, comment is 1, blank is 3.
+model\editar-aluno.php, code is 18, comment is 1, blank is 7.
+model\editar-area.php, code is 14, comment is 1, blank is 7.
+model\editar-professor.php, code is 19, comment is 0, blank is 5.
+model\importar-alunos-csv.php, code is 27, comment is 3, blank is 9.
+model\modal-editar-dados-aluno.php, code is 11, comment is 0, blank is 6.
+model\modal-editar-dados-area.php, code is 11, comment is 0, blank is 6.
+model\modal-editar-dados-professor.php, code is 11, comment is 0, blank is 4.
+model\pesquisa-alunos.php, code is 34, comment is 6, blank is 6.
+model\pesquisa-area.php, code is 29, comment is 6, blank is 6.
+model\pesquisa-professores.php, code is 31, comment is 6, blank is 6.
+model\relatorio-doacao.php, code is 30, comment is 6, blank is 6.
+model\relatorio-usuario.php, code is 28, comment is 6, blank is 7.
+model\relatorio.php, code is 29, comment is 6, blank is 7.
+model\solicitacao-de-orientacao.php, code is 82, comment is 5, blank is 11.
+model\solicitar-orientacao.php, code is 17, comment is 3, blank is 6.
+model\visualizar-professor.php, code is 11, comment is 0, blank is 6.
+view\.htaccess, code is 0, comment is 0, blank is 3.
+view\aluno.php, code is 181, comment is 2, blank is 14.
+view\aprovacao-de-orientacao.php, code is 30, comment is 0, blank is 6.
+view\areas.php, code is 151, comment is 1, blank is 17.
+view\assets\demo\demo.js, code is 507, comment is 29, blank is 61.
+view\assets\demo\less-1.7.0.js, code is 4256, comment is 912, blank is 645.
+view\assets\demo\less\bootstrap-mixins.less, code is 659, comment is 189, blank is 95.
+view\assets\demo\less\bootstrap-variables.less, code is 366, comment is 271, blank is 202.
+view\assets\demo\less\colors.less, code is 88, comment is 0, blank is 18.
+view\assets\demo\less\mixins.less, code is 885, comment is 147, blank is 184.
+view\assets\demo\less\variables.less, code is 43, comment is 27, blank is 34.
+view\assets\demo\logo-big.png, it is a binary file.
+view\assets\demo\signin-bg-1.jpg, it is a binary file.
+view\assets\fonts\font-awesome\fontawesome-webfont.eot, it is a binary file.
+view\assets\fonts\font-awesome\fontawesome-webfont.svg, code is 414, comment is 0, blank is 0.
+view\assets\fonts\font-awesome\fontawesome-webfont.ttf, it is a binary file.
+view\assets\fonts\font-awesome\fontawesome-webfont.woff, it is a binary file.
+view\assets\fonts\font-awesome\FontAwesome.otf, it is a binary file.
+view\assets\images\pixel-admin\avatar.png, it is a binary file.
+view\assets\images\pixel-admin\blank.png, it is a binary file.
+view\assets\images\pixel-admin\blur.svg, code is 5, comment is 0, blank is 0.
+view\assets\images\pixel-admin\main-menu-bg.png, it is a binary file.
+view\assets\images\pixel-admin\main-navbar-bg.png, it is a binary file.
+view\assets\images\pixel-admin\main-navbar-logo.png, it is a binary file.
+view\assets\images\plugins\bootstrap-editable\loading.gif, it is a binary file.
+view\assets\images\plugins\jquery.minicolors.png, it is a binary file.
+view\assets\images\themes\adminflare\body-bg.png, it is a binary file.
+view\assets\images\themes\adminflare\ie-navbar-bg.png, it is a binary file.
+view\assets\images\themes\adminflare\menu-bg.png, it is a binary file.
+view\assets\images\themes\clean\body-bg.gif, it is a binary file.
+view\assets\javascripts\additional-methods.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\bootstrap-editable-demo.js, code is 1, comment is 0, blank is 0.
+view\assets\javascripts\bootstrap-editable-demo.min.js, code is 1, comment is 0, blank is 0.
+view\assets\javascripts\bootstrap.js, code is 1267, comment is 202, blank is 493.
+view\assets\javascripts\bootstrap.min.js, code is 1, comment is 0, blank is 0.
+view\assets\javascripts\demo-mock.js, code is 1, comment is 0, blank is 0.
+view\assets\javascripts\demo-mock.min.js, code is 1, comment is 0, blank is 0.
+view\assets\javascripts\ie.js, code is 487, comment is 100, blank is 91.
+view\assets\javascripts\ie.min.js, code is 1, comment is 1, blank is 0.
+view\assets\javascripts\jquery-ui-extras.js, code is 1658, comment is 405, blank is 207.
+view\assets\javascripts\jquery-ui-extras.min.js, code is 2, comment is 0, blank is 0.
+view\assets\javascripts\jquery.min.js, code is 3, comment is 2, blank is 0.
+view\assets\javascripts\jquery.mockjax.js, code is 1, comment is 0, blank is 0.
+view\assets\javascripts\jquery.mockjax.min.js, code is 1, comment is 0, blank is 0.
+view\assets\javascripts\jquery.multi-select.js, code is 447, comment is 17, blank is 83.
+view\assets\javascripts\jquery.table2excel.js, code is 121, comment is 23, blank is 28.
+view\assets\javascripts\jquery.validate.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ar.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_ar.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_az.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_az.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_bg.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_bg.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_bn_BD.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_bn_BD.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ca.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_ca.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_cs.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_cs.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_da.js, code is 27, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_da.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_de.js, code is 27, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_de.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_el.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_el.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_es.js, code is 33, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_es.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_es_AR.js, code is 33, comment is 5, blank is 1.
+view\assets\javascripts\localization\messages_es_AR.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_es_PE.js, code is 33, comment is 5, blank is 1.
+view\assets\javascripts\localization\messages_es_PE.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_et.js, code is 28, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_et.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_eu.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_eu.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_fa.js, code is 33, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_fa.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_fi.js, code is 28, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_fi.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_fr.js, code is 58, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_fr.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ge.js, code is 29, comment is 5, blank is 1.
+view\assets\javascripts\localization\messages_ge.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_gl.js, code is 35, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_gl.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_he.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_he.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_hr.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_hr.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_hu.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_hu.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_hy_AM.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_hy_AM.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_id.js, code is 29, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_id.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_is.js, code is 28, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_is.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_it.js, code is 34, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_it.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ja.js, code is 31, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_ja.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ka.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_ka.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_kk.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_kk.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ko.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_ko.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_lt.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_lt.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_lv.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_lv.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_mk.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_mk.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_my.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_my.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_nl.js, code is 39, comment is 5, blank is 2.
+view\assets\javascripts\localization\messages_nl.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_no.js, code is 31, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_no.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_pl.js, code is 32, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_pl.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_pt_BR.js, code is 78, comment is 7, blank is 3.
+view\assets\javascripts\localization\messages_pt_BR.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_pt_PT.js, code is 33, comment is 5, blank is 1.
+view\assets\javascripts\localization\messages_pt_PT.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ro.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_ro.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ru.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_ru.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_sd.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_sd.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_si.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_si.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_sk.js, code is 27, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_sk.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_sl.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_sl.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_sr.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_sr.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_sr_lat.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_sr_lat.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_sv.js, code is 28, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_sv.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_th.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_th.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_tj.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_tj.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_tr.js, code is 31, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_tr.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_uk.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_uk.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_ur.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_ur.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_vi.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_vi.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_zh.js, code is 30, comment is 4, blank is 1.
+view\assets\javascripts\localization\messages_zh.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\messages_zh_TW.js, code is 30, comment is 5, blank is 1.
+view\assets\javascripts\localization\messages_zh_TW.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\methods_de.js, code is 19, comment is 4, blank is 1.
+view\assets\javascripts\localization\methods_de.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\methods_es_CL.js, code is 19, comment is 4, blank is 1.
+view\assets\javascripts\localization\methods_es_CL.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\methods_fi.js, code is 19, comment is 4, blank is 1.
+view\assets\javascripts\localization\methods_fi.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\methods_nl.js, code is 19, comment is 4, blank is 1.
+view\assets\javascripts\localization\methods_nl.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\localization\methods_pt.js, code is 16, comment is 4, blank is 1.
+view\assets\javascripts\localization\methods_pt.min.js, code is 1, comment is 3, blank is 0.
+view\assets\javascripts\pixel-admin.js, code is 30565, comment is 12642, blank is 5972.
+view\assets\javascripts\pixel-admin.min.js, code is 17, comment is 2, blank is 0.
+view\assets\javascripts\utilidades.js, code is 4, comment is 1, blank is 0.
+view\assets\stylesheets\bootstrap.css, code is 4344, comment is 1, blank is 848.
+view\assets\stylesheets\bootstrap.min.css, code is 1, comment is 1, blank is 0.
+view\assets\stylesheets\customizacao.css, code is 107, comment is 1, blank is 13.
+view\assets\stylesheets\googleapis.css, code is 392, comment is 112, blank is 0.
+view\assets\stylesheets\multi-select.css, code is 83, comment is 0, blank is 10.
+view\assets\stylesheets\pages.css, code is 1632, comment is 2, blank is 43.
+view\assets\stylesheets\pages.min.css, code is 1, comment is 0, blank is 0.
+view\assets\stylesheets\pixel-admin.css, code is 10528, comment is 64, blank is 1492.
+view\assets\stylesheets\pixel-admin.min.css, code is 2, comment is 16, blank is 0.
+view\assets\stylesheets\rtl.css, code is 2218, comment is 5, blank is 7.
+view\assets\stylesheets\rtl.min.css, code is 1, comment is 0, blank is 0.
+view\assets\stylesheets\themes.css, code is 6097, comment is 0, blank is 15.
+view\assets\stylesheets\themes.min.css, code is 1, comment is 0, blank is 0.
+view\assets\stylesheets\widgets.css, code is 649, comment is 0, blank is 29.
+view\assets\stylesheets\widgets.min.css, code is 1, comment is 0, blank is 0.
+view\cadastrar-senha.php, code is 60, comment is 0, blank is 8.
+view\cadastro-aluno.php, code is 62, comment is 1, blank is 7.
+view\cadastro-area.php, code is 50, comment is 1, blank is 7.
+view\cadastro-professor.php, code is 110, comment is 0, blank is 7.
+view\conferir-recuperar-senha.php, code is 25, comment is 17, blank is 8.
+view\config.php, code is 8, comment is 0, blank is 0.
+view\connection.php, code is 10, comment is 2, blank is 2.
+view\head.php, code is 10, comment is 0, blank is 1.
+view\index.php, code is 136, comment is 0, blank is 28.
+view\mensagens.php, code is 14, comment is 0, blank is 0.
+view\modal-editar-dados-aluno.php, code is 58, comment is 0, blank is 1.
+view\modal-editar-dados-area.php, code is 46, comment is 0, blank is 1.
+view\modal-editar-dados-professor.php, code is 88, comment is 0, blank is 1.
+view\modal-visualizar-dados-professor.php, code is 42, comment is 0, blank is 0.
+view\pages-404.php, code is 26, comment is 1, blank is 7.
+view\pagina-inicial.php, code is 50, comment is 0, blank is 6.
+view\professores.php, code is 165, comment is 0, blank is 12.
+view\relatorio-alunos-orientados.php, code is 94, comment is 8, blank is 26.
+view\relatorio-doacao.php, code is 104, comment is 2, blank is 19.
+view\relatorio-item.php, code is 103, comment is 2, blank is 19.
+view\relatorio-usuario.php, code is 103, comment is 2, blank is 19.
+view\relatorio.php, code is 35, comment is 0, blank is 5.
+view\solicitacao-de-orientacao.php, code is 90, comment is 0, blank is 9.
+view\sucesso.php, code is 33, comment is 0, blank is 8.
+view\tabela doacoes.php, code is 190, comment is 0, blank is 14.
+view\teste.php, code is 63, comment is 26, blank is 23.
+===============================================================================
