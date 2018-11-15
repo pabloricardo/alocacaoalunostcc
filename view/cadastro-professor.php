@@ -156,8 +156,7 @@ $('#areas').multiSelect({
 					url: "http://alocacaotcc.esy.es/api-alocacao-alunos-tcc/public/api/professor/cadastrar",
 					data: dados,
 					success: function(data)
-					{
-						data = JSON.parse(data);						
+					{						
 						$("div.mensagem-inserir-usuario").removeClass("alert-success alert-danger");						
 						if(data.status == true){
 							$("div.mensagem-inserir-usuario").show();
